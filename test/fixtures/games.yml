@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  console: one
-  genre: one
-  productType: one
+  console_id: 1
+  genre_id: 1
+  product_type_id: 1
+  name: MyString
   price: 9.99
   description: MyText
-  dateReleased: 2017-11-02
-  name: MyString
+  date_released: 2017-11-06
 
 two:
-  console: two
-  genre: two
-  productType: two
+  console_id: 1
+  genre_id: 1
+  product_type_id: 1
+  name: MyString
   price: 9.99
   description: MyText
-  dateReleased: 2017-11-02
-  name: MyString
+  date_released: 2017-11-06

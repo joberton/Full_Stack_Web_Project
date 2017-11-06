@@ -10,32 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102142347) do
+ActiveRecord::Schema.define(version: 20171106175112) do
 
   create_table "consoles", force: :cascade do |t|
-    t.integer "productType_id"
     t.string "name"
     t.decimal "price"
     t.text "description"
-    t.date "dateReleased"
+    t.date "date_released"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["productType_id"], name: "index_consoles_on_productType_id"
+    t.integer "product_type_id"
+    t.index ["product_type_id"], name: "index_consoles_on_product_type_id"
   end
 
   create_table "games", force: :cascade do |t|
-    t.integer "console_id"
-    t.integer "genre_id"
-    t.integer "productType_id"
+    t.string "name"
     t.decimal "price"
     t.text "description"
-    t.date "dateReleased"
-    t.string "name"
+    t.date "date_released"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "console_id"
+    t.integer "genre_id"
+    t.integer "product_type_id"
     t.index ["console_id"], name: "index_games_on_console_id"
     t.index ["genre_id"], name: "index_games_on_genre_id"
-    t.index ["productType_id"], name: "index_games_on_productType_id"
+    t.index ["product_type_id"], name: "index_games_on_product_type_id"
   end
 
   create_table "genres", force: :cascade do |t|

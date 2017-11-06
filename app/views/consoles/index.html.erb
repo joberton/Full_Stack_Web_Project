@@ -1,0 +1,9 @@
+<h1>Nerds Eat Them</h1>
+<% @consoles.each do |console| %>
+	<ul>
+		<li><%= link_to console.name, console %></li>
+		<li><%= console.price %></li>
+		<li><%= console.description %></li>
+		<li><%= console.date_released %></li>
+	</ul>
+<%end%>

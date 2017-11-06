@@ -1,3 +1,3 @@
 class Console < ApplicationRecord
-  belongs_to :productType
+	has_many :games
 end
