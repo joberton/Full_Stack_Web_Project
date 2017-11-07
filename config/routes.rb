@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get 'consoles/:id', to: 'consoles#findConsole', as: 'console', id: '/\d+/'
   get 'games', to: 'games#index', as: 'games' 
   get 'games/:id', to: 'games#findGame', as: 'game', id: '/\d+/'
+  get 'genres', to: 'genres#index', as: 'genres'
+
+  root 'games#index'
 end
