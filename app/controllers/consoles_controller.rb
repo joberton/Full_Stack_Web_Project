@@ -1,6 +1,6 @@
 class ConsolesController < ApplicationController
 	def index
-		@consoles = Console.all
+		@consoles = params[:search] ?  Console.where("name LIKE ?", "%#{params[:search]}%") : Console.all
 	end
 
 	def findConsole

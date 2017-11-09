@@ -1,5 +1,5 @@
 class GenresController < ApplicationController
 	def index
-		@genres = Genre.all
+		@genres = params[:search] ?  Genre.where("name LIKE ?", "%#{params[:search]}%") : Genre.all
 	end
 end

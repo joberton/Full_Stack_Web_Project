@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 	def index
-		@games = Game.all
+		@games = params[:search] ?  Game.where("name LIKE ?", "%#{params[:search]}%") : Game.all
 	end
 
 	def findGame
