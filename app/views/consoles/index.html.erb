@@ -3,6 +3,7 @@
 <% @consoles.each do |console| %>
 	<ul>
 		<li><%= link_to console.name, console %></li>
+		<li><%= image_tag console.image, size: "200" %></li>
 		<li><%= console.price %></li>
 		<li><%= console.description %></li>
 		<li><%= console.date_released %></li>

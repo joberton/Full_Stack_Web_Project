@@ -3,6 +3,7 @@
 <% @games.each do |game| %>
 	<ul>
 		<li><%= link_to game.name, game %></li>
+		<li><%= image_tag game.image, size: "200" %></li>
 		<li><%= game.price %></li>
 		<li><%= game.description %></li>
 		<li><%= game.date_released %></li>
