@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get 'games/:id', to: 'games#findGame', as: 'game', id: '/\d+/'
   get 'genres', to: 'genres#index', as: 'genres'
 
-  root 'games#index'
+  root 'home#index'
 end
