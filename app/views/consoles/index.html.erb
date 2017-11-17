@@ -1,7 +1,7 @@
 <h1>Nerds Eat Them</h1>
 <%= paginate @consoles %>
 <% @consoles.each do |console| %>
-	<ul>
+	<ul id="products">
 		<li><%= link_to console.name, console %></li>
 		<li><%= image_tag console.image, size: "200" %></li>
 		<li><%= console.price %></li>

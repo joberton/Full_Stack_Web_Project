@@ -1,7 +1,7 @@
 <h1>Nerds eat them</h1>
 <%= paginate @games %>
 <% @games.each do |game| %>
-	<ul>
+	<ul id="products">
 		<li><%= link_to game.name, game %></li>
 		<li><%= image_tag game.image, size: "200" %></li>
 		<li><%= game.price %></li>
