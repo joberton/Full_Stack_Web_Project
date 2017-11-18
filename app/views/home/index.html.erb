@@ -1,4 +1,12 @@
 <h1>Nerds eat them</h1>
-<h1><%= @all_products.inspect %></h1>
+<% @all_products.each do |product| %>
+	<ul id="products">
+		<li><%= link_to product.name, product %></li>
+		<li><%= image_tag product.image, size: "200" %></li>
+		<li><%= product.price %></li>
+		<li><%= product.description %></li>
+		<li><%= product.date_released %></li>
+	</ul>
+<%end%>
 
 	

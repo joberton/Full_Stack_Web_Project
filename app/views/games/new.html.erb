@@ -15,7 +15,7 @@
 	<%= form.text_field :name %></br>
 	
 	<%= form.label :price %></br>
-	<%= form.number_field :price %></br>
+	<%= form.number_field :price, step: :any %></br>
 	
 	<%= form.label :date_released %></br>
 	<%= form.date_select :date_released, :order => [:day,:month,:year] %></br>
