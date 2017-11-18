@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'kaminari'
+#gem 'carrierwave', '~> 0.10.0'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 
