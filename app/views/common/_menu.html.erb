@@ -10,6 +10,8 @@
 	</nav>
 	<%= form_tag "#{request.base_url}#{request.path}", method: 'get' do%>
 		<%= text_field_tag 'search', params[:search] %>
+		<%= label_tag 'Category', 'Category'%>
+		<%= select_tag 'category', options_for_select(@consoles.collect {|console| [console.name,console.id]}), :include_blank => true %>
 		<%= submit_tag "search", name: nil %>
 	<%end%>
 </header>

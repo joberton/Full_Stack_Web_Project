@@ -1,6 +1,10 @@
 class GamesController < ApplicationController
 	def index
-		@games = params[:search] ?  Game.where("name LIKE ?", "%#{params[:search]}%").order(:name).page(params[:page]).per(8) : Game.all.page(params[:page]).per(8)
+		setup
+		@games = Game.all.page(params[:page]).per(8).order(:name)
+		if(params[:search])
+			@games = !params[:category].empty? ? Game.where("name LIKE ?", "%#{params[:search]}%").where("console_id = #{params[:category]}").order(:name).page(params[:page]).per(8) : Game.where("name LIKE ?", "%#{params[:search]}%").order(:name).page(params[:page]).per(8)
+		end
 	end
 
 	def new
