@@ -9,7 +9,7 @@ class GamesController < ApplicationController
 	end
 
 	def create
-		@game = Game.create(params.require(:game).permit(:name,:price,:date_released,:description,:console_id,:genre_id,:product_type_id).merge(:product_type_id => 2))
+		@game = Game.create(params.require(:game).permit(:name,:price,:date_released,:description,:console_id,:genre_id,:product_type_id,:image).merge(:product_type_id => 2))
 		redirect_to @game
 	end
 

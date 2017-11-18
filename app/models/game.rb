@@ -7,6 +7,8 @@ class Game < ApplicationRecord
 	validates :date_released, presence: true
 	validates :price, presence: true
 	validates :price, numericality: {other_than: 0}
+
+	mount_uploader :image, ImageUploader
 	
 	belongs_to :console
 	belongs_to :genre

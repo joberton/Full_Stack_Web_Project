@@ -16,6 +16,9 @@
 	<%= form.select :console_id, options_for_select(@consoles.collect {|console| [console.name,console.id]}) %></br>
 	
 	<%= form.select :genre_id, options_for_select(@genres.collect {|genre| [genre.name,genre.id]}) %></br>
+
+	<%= form.label :image %></br>
+	<%= form.file_field :image%></br>
 	
 	<%= form.submit %>
 <% end %>
