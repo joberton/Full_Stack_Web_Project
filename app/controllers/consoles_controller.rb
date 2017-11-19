@@ -3,7 +3,17 @@ class ConsolesController < ApplicationController
 		@consoles = params[:search] ?  Console.where("name LIKE ?", "%#{params[:search]}%").order(:name).page(params[:page]).per(3) : Console.all.page(params[:page]).per(3)
 	end
 
-	def findConsole
+	def add_to_cart
+		if(session[:cart].nil?)
+			session[:cart] = []
+		end
+		@console = Console.find(params[:id])
+		session[:cart] << @console
+		redirect_to shopping_cart_url
+	end
+
+	def show
 		@console = Console.find(params[:id])
 	end
+
 end

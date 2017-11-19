@@ -11,6 +11,15 @@ class GamesController < ApplicationController
 		setup
 	end
 
+	def add_to_cart
+		if(session[:cart].nil?)
+			session[:cart] = []
+		end
+		@game = Game.find(params[:id])
+		session[:cart] << @game
+		redirect_to shopping_cart_url
+	end
+
 	def create
 		setup
 		@game = Game.create(params.require(:game).permit(:name,:price,:date_released,:description,:console_id,:genre_id,:product_type_id,:image).merge(:product_type_id => 2))
