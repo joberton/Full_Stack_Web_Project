@@ -13,8 +13,8 @@ class GamesController < ApplicationController
 
 	def add_to_cart
 		@game = Game.find(params[:id])
-		session[:cart] << @game
-		redirect_to shopping_cart_url
+		session[:cart] << @game.as_json.merge(:quantity => 1)
+		redirect_to shopping_cart_index_url
 	end
 
 	def create

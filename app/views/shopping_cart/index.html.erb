@@ -1,10 +1,13 @@
 <h1>Hoi it shopping cart</h1>
-<% @shopping_cart.each do |item| %>
+<h1>Test Data: <%= @shopping_cart.inspect%> </h1>
+<% @shopping_cart.each_with_index do |item,index| %>
 	<ul id="products">
 		<li><%= item["name"] %></li>
 		<li><%= image_tag "#{item['image']['url']}", size: "200" %></li>
 		<li><%= item["price"] %></li>
 		<li><%= item["description"] %></li>
 		<li><%= item["date_released"] %></li>
+		<li><%= "Quantity: #{item['quantity']} " %><%= link_to "change quantity?", edit_shopping_cart_url(:id => index) %></li>
+		<%= link_to "remove?", shopping_cart_url(:id => index), method: :delete, data: {confirm: "are you sure?"} %>
 	</ul>
 <%end%>

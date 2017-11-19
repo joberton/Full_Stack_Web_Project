@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources 'consoles'
   resources 'games'
   resources 'genres'
+  resources 'shopping_cart'
   get 'games/:id/add_to_cart', to: 'games#add_to_cart', as: 'add_game_cart'
   get 'consoles/:id/add_to_cart', to: 'consoles#add_to_cart', as: 'add_console_cart'
-  get 'shopping_cart', to: 'shopping_cart#index', as: 'shopping_cart'
   root 'home#index'
 end

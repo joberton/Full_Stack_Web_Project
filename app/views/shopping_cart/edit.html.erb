@@ -1,0 +1,7 @@
+<h1>Edits?</h1>
+<%= form_with url: shopping_cart_url(:id => @cart_item), method: :patch, local: true do |form|  %>
+	<%= form.label :quantity %></br>
+	<%= form.number_field :quantity %></br>
+
+	<%= form.submit %>
+<% end %>

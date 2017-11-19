@@ -6,6 +6,8 @@ class Console < ApplicationRecord
 	validates :price, presence: true
 	validates :price, numericality: {other_than: 0}
 	
+	mount_uploader :image, ImageUploader
+	
 	has_many :games
 	belongs_to :product_type
 end

@@ -5,8 +5,8 @@ class ConsolesController < ApplicationController
 
 	def add_to_cart
 		@console = Console.find(params[:id])
-		session[:cart] << @console
-		redirect_to shopping_cart_url
+		session[:cart] << @console.as_json.merge(:quantity => 1)
+		redirect_to shopping_cart_index_url
 	end
 
 	def show
