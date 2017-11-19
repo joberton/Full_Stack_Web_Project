@@ -1,11 +1,11 @@
-<h1>New Game!!!</h1>
-<%= form_with scope: :game, url: games_url, local: true do |form| %>
+<h1>New Console!!!</h1>
+<%= form_with scope: :console, url: consoles_url, local: true do |form| %>
 	
-	<% if @game.errors.any? %>
+	<% if @console.errors.any? %>
 		<div id="error">
-			<h2><%= pluralize(@game.errors.count, 'error')%> prohibited this game from being saved</h2>
+			<h2><%= pluralize(@console.errors.count, 'error')%> prohibited this game from being saved</h2>
 			<ul>
-				<%= @game.errors.full_messages.each do |message| %>
+				<%= @console.errors.full_messages.each do |message| %>
 					<li><%= message %></li>
 				<% end %>
 			</ul>
@@ -14,22 +14,18 @@
 
 	<%= form.label :name %></br>
 	<%= form.text_field :name %></br>
-	
+
 	<%= form.label :price %></br>
 	<%= form.number_field :price, step: :any %></br>
-	
+
 	<%= form.label :date_released %></br>
 	<%= form.date_select :date_released, :order => [:day,:month,:year] %></br>
-	
+
 	<%= form.label :description %></br>
 	<%= form.text_area :description %></br>
 
-	<%= form.select :console_id, options_for_select(@consoles.collect {|console| [console.name,console.id]}) %></br>
-	
-	<%= form.select :genre_id, options_for_select(@genres.collect {|genre| [genre.name,genre.id]}) %></br>
-
 	<%= form.label :image %></br>
 	<%= form.file_field :image%></br>
-	
+
 	<%= form.submit %>
 <% end %>
