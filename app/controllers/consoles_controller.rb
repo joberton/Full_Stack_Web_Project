@@ -4,9 +4,6 @@ class ConsolesController < ApplicationController
 	end
 
 	def add_to_cart
-		if(session[:cart].nil?)
-			session[:cart] = []
-		end
 		@console = Console.find(params[:id])
 		session[:cart] << @console
 		redirect_to shopping_cart_url

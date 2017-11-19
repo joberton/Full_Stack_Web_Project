@@ -1,2 +1,10 @@
 <h1>Hoi it shopping cart</h1>
-<h1><%= session[:cart].inspect %></h1>
+<% @shopping_cart.each do |item| %>
+	<ul id="products">
+		<li><%= item["name"] %></li>
+		<li><%= image_tag "#{item['image']['url']}", size: "200" %></li>
+		<li><%= item["price"] %></li>
+		<li><%= item["description"] %></li>
+		<li><%= item["date_released"] %></li>
+	</ul>
+<%end%>

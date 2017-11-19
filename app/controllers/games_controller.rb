@@ -12,9 +12,6 @@ class GamesController < ApplicationController
 	end
 
 	def add_to_cart
-		if(session[:cart].nil?)
-			session[:cart] = []
-		end
 		@game = Game.find(params[:id])
 		session[:cart] << @game
 		redirect_to shopping_cart_url
