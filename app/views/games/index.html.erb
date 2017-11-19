@@ -8,6 +8,7 @@
 		<li><%= game.price %></li>
 		<li><%= game.description %></li>
 		<li><%= game.date_released %></li>
+		<%= link_to "remove?", game_url(:id => game.id), method: :delete, data: {confirm: "are you sure?"} %>
 	</ul>
 <%end%>
 <%= link_to "new" ,new_game_url %>

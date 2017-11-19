@@ -9,6 +9,11 @@ class ConsolesController < ApplicationController
 		redirect_to shopping_cart_index_url
 	end
 
+	def destroy
+		Console.find(params[:id]).destroy
+		redirect_to consoles_url
+	end
+
 	def new
 		@console = Console.new
 	end

@@ -11,6 +11,11 @@ class GamesController < ApplicationController
 		setup
 	end
 
+	def destroy
+		Game.find(params[:id]).destroy
+		redirect_to games_url
+	end
+
 	def add_to_cart
 		@game = Game.find(params[:id])
 		session[:cart] << @game.as_json.merge(:quantity => 1)
