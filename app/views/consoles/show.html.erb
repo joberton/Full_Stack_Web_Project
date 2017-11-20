@@ -7,4 +7,4 @@
 	<li><%= @console.date_released %></li>
 </ul>
 <%= link_to "back", consoles_url %>
-<%= link_to "add to cart", add_console_cart_url %>
+<%= link_to "add to cart", console_add_shopping_cart_url(@console) %>
