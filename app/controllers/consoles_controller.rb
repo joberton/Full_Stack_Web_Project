@@ -9,6 +9,20 @@ class ConsolesController < ApplicationController
 		redirect_to shopping_cart_index_url
 	end
 
+	def edit
+		@console = Console.find(params[:id])
+	end
+
+	def update
+		@console = Console.find(params[:id])
+
+		if(@console.update(permitted_parameters))
+			redirect_to @console
+		else
+			render 'edit'
+		end
+	end
+
 	def destroy
 		Console.find(params[:id]).destroy
 		redirect_to consoles_url
@@ -19,7 +33,7 @@ class ConsolesController < ApplicationController
 	end
 
 	def create
-		@console = Console.create(params.require(:console).permit(:name,:price,:date_released,:description,:image,:product_type_id).merge(:product_type_id => 1))
+		@console = Console.create(permitted_parameters)
 		if(@console.valid?)
 			redirect_to @console
 		else
@@ -30,4 +44,9 @@ class ConsolesController < ApplicationController
 	def show
 		@console = Console.find(params[:id])
 	end
+
+	private 
+		def permitted_parameters
+			params.require(:console).permit(:name,:price,:date_released,:description,:image,:product_type_id).merge(:product_type_id => 1)
+		end
 end

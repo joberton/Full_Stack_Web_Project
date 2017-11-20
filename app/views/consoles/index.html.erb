@@ -8,7 +8,8 @@
 		<li><%= console.price %></li>
 		<li><%= console.description %></li>
 		<li><%= console.date_released %></li>
-		<%= link_to "remove?", console_url(:id => console.id), method: :delete, data: {confirm: "are you sure?"} %>
+		<%= link_to "remove?", console_url(console), method: :delete, data: {confirm: "are you sure?"} %>
+		<%= link_to "edit?", edit_console_url(console) %>
 	</ul>
 <%end%>
 <%= link_to "new", new_console_url %>

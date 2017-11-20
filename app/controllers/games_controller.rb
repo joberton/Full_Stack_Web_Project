@@ -8,7 +8,24 @@ class GamesController < ApplicationController
 	end
 
 	def new
+		@game = Game.new
 		setup
+	end
+
+	def edit
+		setup
+		@game = Game.find(params[:id])
+	end
+
+	def update
+		setup
+		@game = Game.find(params[:id])
+		
+		if(@game.update(permitted_parameters))
+			redirect_to @game
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
@@ -24,7 +41,7 @@ class GamesController < ApplicationController
 
 	def create
 		setup
-		@game = Game.create(params.require(:game).permit(:name,:price,:date_released,:description,:console_id,:genre_id,:product_type_id,:image).merge(:product_type_id => 2))
+		@game = Game.create(permitted_parameters)
 		if @game.valid? 
 			redirect_to @game
 		else
@@ -37,8 +54,12 @@ class GamesController < ApplicationController
 	end
 
 	def setup
-		@game = Game.new
 		@consoles = Console.all
 		@genres = Genre.all
 	end
+
+	private
+		def permitted_parameters
+			params.require(:game).permit(:name,:price,:date_released,:description,:console_id,:genre_id,:product_type_id,:image).merge(:product_type_id => 2)
+		end
 end

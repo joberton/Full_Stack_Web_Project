@@ -7,7 +7,7 @@
 		<li><%= item["price"] %></li>
 		<li><%= item["description"] %></li>
 		<li><%= item["date_released"] %></li>
-		<li><%= "Quantity: #{item['quantity']} " %><%= link_to "change quantity?", edit_shopping_cart_url(:id => index) %></li>
-		<%= link_to "remove?", shopping_cart_url(:id => index), method: :delete, data: {confirm: "are you sure?"} %>
+		<li><%= "Quantity: #{item['quantity']} " %><%= link_to "change quantity?", edit_shopping_cart_url(index) %></li>
+		<%= link_to "remove?", shopping_cart_url(index), method: :delete, data: {confirm: "are you sure?"} %>
 	</ul>
 <%end%>
