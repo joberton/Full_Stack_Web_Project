@@ -1,4 +1,4 @@
-<%= render partial: "common/search" %>
+<%= render partial: "common/search", locals: {category: true} %>
 <h1>Nerds eat them</h1>
 <%= paginate @games %>
 <% @games.each do |game| %>
