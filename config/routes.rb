@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   end
   resources 'genres'
   resources 'shopping_cart'
+  resources 'home'
   root 'home#index'
 end

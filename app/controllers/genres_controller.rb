@@ -17,6 +17,7 @@ class GenresController < ApplicationController
 
 	def update
 		if(@genre.update(permitted_parameters))
+			flash[:notice] = "Genre Updated Successfully"
 			redirect_to genres_url
 		else
 			render "edit"
@@ -25,12 +26,14 @@ class GenresController < ApplicationController
 
 	def destroy
 		@genre.destroy
+		flash[:notice] = "Genre Deleted Successfully"
 		redirect_to genres_url
 	end
 
 	def create
 		@genre = Genre.create(permitted_parameters)
 		if(@genre.valid?)
+			flash[:notice] = "Genre Created Successfully"
 			redirect_to genres_url
 		else
 			render 'new'

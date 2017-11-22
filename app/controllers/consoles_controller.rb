@@ -9,6 +9,7 @@ class ConsolesController < ApplicationController
 
 	def add_to_cart
 		session[:cart] << @console.as_json.merge(:quantity => 1)
+		flash[:notice] = "Item added to cart Successfully"
 		redirect_to shopping_cart_index_url
 	end
 
@@ -19,6 +20,7 @@ class ConsolesController < ApplicationController
 	def update
 		if(@console.update(permitted_parameters))
 			redirect_to @console
+			flash[:notice] = "Console Updated Successfully"
 		else
 			render 'edit'
 		end
@@ -26,6 +28,7 @@ class ConsolesController < ApplicationController
 
 	def destroy
 		@console.destroy
+		flash[:notice] = "Console removed Successfully"
 		redirect_to consoles_url
 	end
 
@@ -36,6 +39,7 @@ class ConsolesController < ApplicationController
 	def create
 		@console = Console.create(permitted_parameters)
 		if(@console.valid?)
+			flash[:notice] = "Console Created Successfully"
 			redirect_to @console
 		else
 			render 'new'

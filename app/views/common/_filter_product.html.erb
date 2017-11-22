@@ -1,0 +1,6 @@
+<%= form_tag "#{home_index_url}", method: :get do %>
+	<%= label_tag "Filter:" %>
+	<%= select_tag "filter", options_for_select(["","recently_added","recently_updated"]) %>
+
+	<%= submit_tag "filter", name: nil %>
+<% end %>

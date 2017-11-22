@@ -10,7 +10,7 @@ class GamesController < ApplicationController
 			@games = !params[:console].empty? ? Game.where("name LIKE ?", "%#{params[:search]}%").where(console_id: params[:console]).order(:name).page(params[:page]).per(8) : Game.where("name LIKE ?", "%#{params[:search]}%").order(:name).page(params[:page]).per(8)
 			#rails is being super effey about the or statement in activerecord needed this to filter on the genre
 			if !params[:genre].empty?
-				@games = @games.where(genre_id: params[:genre]);
+				@games = @games.where(genre_id: params[:genre]).page(params[:page]).per(8);
 			end
 		end
 	end
@@ -25,6 +25,7 @@ class GamesController < ApplicationController
 
 	def update
 		if(@game.update(permitted_parameters))
+			flash[:notice] = "Game Updated Successfully"
 			redirect_to @game
 		else
 			render 'edit'
@@ -33,17 +34,20 @@ class GamesController < ApplicationController
 
 	def destroy
 		@game.destroy
+		flash[:notice] = "Game removed Successfully"
 		redirect_to games_url
 	end
 
 	def add_to_cart
 		session[:cart] << @game.as_json.merge(:quantity => 1)
+		flash[:notice] = "Item added to cart Successfully"
 		redirect_to shopping_cart_index_url
 	end
 
 	def create
 		@game = Game.create(permitted_parameters)
 		if @game.valid? 
+			flash[:notice] = "Game Created Successfully"
 			redirect_to @game
 		else
 			render 'new'
