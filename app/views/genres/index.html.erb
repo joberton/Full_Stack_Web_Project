@@ -1,6 +1,12 @@
 <h1>Nerds Eat Them</h1>
 <ul>
 	<% @genres.each do |genre| %>
-		<li><%= genre.name %></li>
+		<li>
+			<%= genre.name %>
+			<%= link_to "remove?", genre_url(genre), method: :delete, data: {confirm: "are you sure?"} %>
+			<%= link_to "edit?", edit_genre_url(genre) %>
+		</li>
+
 	<%end%>
+	<%= link_to "new?", new_genre_url %>
 </ul>
