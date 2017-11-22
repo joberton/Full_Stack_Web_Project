@@ -12,6 +12,10 @@ class ShoppingCartController < ApplicationController
 		redirect_to shopping_cart_index_url
 	end
 
+	def checkout
+		
+	end
+
 	def update
 		session[:cart][params[:id].to_i]["quantity"] = params[:quantity]
 		flash[:notice] = "Item updated successfully"

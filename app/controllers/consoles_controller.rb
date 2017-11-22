@@ -1,6 +1,6 @@
 class ConsolesController < ApplicationController
 	
-	before_action :find_console, only: [:show,:edit,:destory,:update,:add_to_cart]
+	before_action :find_console, only: [:show,:edit,:destroy,:update,:add_to_cart]
 	before_action :authenticate_user!
 
 	def index

@@ -1,0 +1,22 @@
+<h1>Checkout!!!</h1>
+<%= form_with url: shopping_cart_index_url, local: true do |form| %>
+	<%= form.label :first_name %>
+	<%= form.text_field :first_name %></br>
+
+	<%= form.label :last_name %>
+	<%= form.text_field :last_name %></br>
+
+	<%= form.label :address %>
+	<%= form.text_field :address %></br>
+
+	<%= form.label :postal_code %>
+	<%= form.text_field :postal_code %></br>
+
+	<%= form.label :email %>
+	<%= form.text_field :email %></br>
+
+	<%= form.label :province %>
+	<%= select_tag "province", options_for_select(["Manitoba"]) %></br>
+
+	<%= form.submit %>
+<% end %>
