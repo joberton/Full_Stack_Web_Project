@@ -3515,3 +3515,1081 @@ Processing by ShoppingCartController#checkout as HTML
 Completed 200 OK in 649ms (Views: 587.1ms | ActiveRecord: 10.4ms)
 
 
+Started GET "/admin" for 10.0.2.2 at 2017-11-22 23:05:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProvinces (20171122225859)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "provinces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "pst" decimal, "gst" decimal, "hst" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171122225859"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_consoles_on_product_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_consoles_on_product_type_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/admin" for 10.0.2.2 at 2017-11-22 23:06:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 10.0.2.2 at 2017-11-22 23:06:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (247.9ms)
+Completed 200 OK in 1973ms (Views: 1944.9ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/admin/login" for 10.0.2.2 at 2017-11-22 23:06:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IYw9vsJivyf+4XWRURgVsOUYbCQk9AVVpvwzYgsKQNBunZTKGJTOYv1UBwTBxFvvsKIbbbvhG9gXTto9Oyd9OQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.8ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2017-11-22 23:06:31.586991"], ["last_sign_in_at", "2017-11-22 19:45:35.897607"], ["sign_in_count", 3], ["updated_at", "2017-11-22 23:06:31.588549"], ["id", 1]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 336ms (ActiveRecord: 22.8ms)
+
+
+Started GET "/admin" for 10.0.2.2 at 2017-11-22 23:06:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/page/index.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/page/index.html.arb (345.5ms)
+Completed 200 OK in 467ms (Views: 361.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:06:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (439.2ms)
+Completed 200 OK in 596ms (Views: 469.1ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:06:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (460.1ms)
+Completed 200 OK in 595ms (Views: 492.3ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:07:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NH+AJEw8cF7nzbtvEs9ED8kWp/KIO8wy3+IcuJlHI+YyYJolLE+NVzymnyZ14ygnt4lAaMK5ySatnMZzkI99BA==", "province"=>{"name"=>"Manitoba", "pst"=>"8.00", "gst"=>"5.00", "hst"=>""}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Manitoba"], ["pst", 8.0], ["gst", 5.0], ["created_at", "2017-11-22 23:07:02.678002"], ["updated_at", "2017-11-22 23:07:02.678002"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/1
+Completed 302 Found in 189ms (ActiveRecord: 24.8ms)
+
+
+Started GET "/admin/provinces/1" for 10.0.2.2 at 2017-11-22 23:07:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (482.6ms)
+Completed 200 OK in 618ms (Views: 504.8ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:07:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (397.7ms)
+Completed 200 OK in 518ms (Views: 421.9ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:07:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (413.5ms)
+Completed 200 OK in 546ms (Views: 445.7ms | ActiveRecord: 14.0ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:07:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ig+7VIyBISxH2iALcr4jvMJsXrSEWXRWgqGppQxYgrEkEKFV7PLcJZyxBEIVkk+UvPO5Ls7bcULw33NuBZDcUw==", "province"=>{"name"=>"Alberta", "pst"=>"5.00", "gst"=>"0.00", "hst"=>"0.00"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Alberta"], ["pst", 5.0], ["gst", 0.0], ["hst", 0.0], ["created_at", "2017-11-22 23:07:36.770287"], ["updated_at", "2017-11-22 23:07:36.770287"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/2
+Completed 302 Found in 199ms (ActiveRecord: 23.8ms)
+
+
+Started GET "/admin/provinces/2" for 10.0.2.2 at 2017-11-22 23:07:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (1.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.9ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 2 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 2 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (460.2ms)
+Completed 200 OK in 596ms (Views: 488.0ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:07:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.8ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (430.7ms)
+Completed 200 OK in 564ms (Views: 455.8ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/admin/provinces/1/edit" for 10.0.2.2 at 2017-11-22 23:07:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE Province Load (0.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/edit.html.arb (436.6ms)
+Completed 200 OK in 592ms (Views: 483.3ms | ActiveRecord: 17.2ms)
+
+
+Started PATCH "/admin/provinces/1" for 10.0.2.2 at 2017-11-22 23:07:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zNfhzB69lnVIgNB44jXeoRQSL0tfAyQRLQqimatEcCTKyPvNfs5rfJPr9DGFGbKJao3I0RWBIQVfdHhSoowuxg==", "province"=>{"name"=>"Manitoba", "pst"=>"8.0", "gst"=>"5.0", "hst"=>"0.0"}, "commit"=>"Update Province", "id"=>"1"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[33mUPDATE "provinces" SET "hst" = ?, "updated_at" = ? WHERE "provinces"."id" = ?[0m  [["hst", 0.0], ["updated_at", "2017-11-22 23:07:53.957289"], ["id", 1]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/1
+Completed 302 Found in 197ms (ActiveRecord: 25.3ms)
+
+
+Started GET "/admin/provinces/1" for 10.0.2.2 at 2017-11-22 23:07:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.9ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (456.6ms)
+Completed 200 OK in 589ms (Views: 483.2ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:08:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (2.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (457.4ms)
+Completed 200 OK in 584ms (Views: 481.9ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:08:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (466.4ms)
+Completed 200 OK in 596ms (Views: 498.8ms | ActiveRecord: 13.5ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:09:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O1wZmDRCZEb7Ay48sb8yfaKLG2ZjchfbEBB9XKoxeP09QwOZVDGZTyBoCnXWk15V3BT8/CnwEs9ibqeXo/kmHw==", "province"=>{"name"=>"Saskatchewan", "pst"=>"6", "gst"=>"5", "hst"=>"0"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Saskatchewan"], ["pst", 6.0], ["gst", 5.0], ["hst", 0.0], ["created_at", "2017-11-22 23:09:15.622750"], ["updated_at", "2017-11-22 23:09:15.622750"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/3
+Completed 302 Found in 188ms (ActiveRecord: 24.1ms)
+
+
+Started GET "/admin/provinces/3" for 10.0.2.2 at 2017-11-22 23:09:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 3 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 3 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (445.7ms)
+Completed 200 OK in 577ms (Views: 472.4ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:09:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (2.4ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (483.2ms)
+Completed 200 OK in 617ms (Views: 510.5ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:09:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (453.5ms)
+Completed 200 OK in 591ms (Views: 486.3ms | ActiveRecord: 14.5ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:10:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rwsmTv6b+Hby2lvVirGpkzM8pKwvjo0TIv9TQoaWkSGpFDxPnugFfymxf5ztncW7TaNDNmUMiAdQgYmJj17Pww==", "province"=>{"name"=>"British Columbia", "pst"=>"0.00", "gst"=>"0.00", "hst"=>"12"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "British Columbia"], ["pst", 0.0], ["gst", 0.0], ["hst", 12.0], ["created_at", "2017-11-22 23:10:40.265853"], ["updated_at", "2017-11-22 23:10:40.265853"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/4
+Completed 302 Found in 193ms (ActiveRecord: 24.4ms)
+
+
+Started GET "/admin/provinces/4" for 10.0.2.2 at 2017-11-22 23:10:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdminUser Load (1.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 4 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 4 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (458.7ms)
+Completed 200 OK in 603ms (Views: 488.6ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:10:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (430.3ms)
+Completed 200 OK in 556ms (Views: 455.3ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:10:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (418.9ms)
+Completed 200 OK in 556ms (Views: 452.6ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:11:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FJmCFGLYck1zzJ8/eiuawWN2lmfMqJneYhgAzquPv/WTXwJMficwO6kFjWaxMJDexI9w9Wwp3ML9rrIM2ZgHQ==", "province"=>{"name"=>"Ontario", "pst"=>"0", "gst"=>"0", "hst"=>"13"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ontario"], ["pst", 0.0], ["gst", 0.0], ["hst", 13.0], ["created_at", "2017-11-22 23:11:20.597729"], ["updated_at", "2017-11-22 23:11:20.597729"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/5
+Completed 302 Found in 192ms (ActiveRecord: 28.9ms)
+
+
+Started GET "/admin/provinces/5" for 10.0.2.2 at 2017-11-22 23:11:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 5 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 5 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (454.2ms)
+Completed 200 OK in 590ms (Views: 481.4ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:11:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (426.8ms)
+Completed 200 OK in 552ms (Views: 454.0ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:11:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (472.8ms)
+Completed 200 OK in 614ms (Views: 506.9ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:12:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.5ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (415.0ms)
+Completed 200 OK in 540ms (Views: 441.7ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-22 23:14:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (0.9ms)
+  [1m[36mGame Load (1.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (37.2ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 723ms (Views: 663.7ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-22 23:14:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  Rendered shopping_cart/index.html.erb within layouts/application (1.4ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 636ms (Views: 578.6ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-22 23:14:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (1.4ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (40.2ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 13.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `province' for 1:Fixnum):
+    16: 	<%= form.text_field :email %></br>
+    17: 
+    18: 	<%= form.label :province %>
+    19: 	<%= select_tag "province", options_for_select(@provinces.collect{|province| [province.id.province.name]}) %></br>
+    20: 
+    21: 	<%= form.submit %>
+    22: <% end %>
+  
+app/views/shopping_cart/checkout.html.erb:19:in `block (2 levels) in _app_views_shopping_cart_checkout_html_erb___231270423_97930470'
+app/views/shopping_cart/checkout.html.erb:19:in `collect'
+app/views/shopping_cart/checkout.html.erb:19:in `block in _app_views_shopping_cart_checkout_html_erb___231270423_97930470'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb___231270423_97930470'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-22 23:15:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (17.1ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 553ms (Views: 493.3ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:28:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.6ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (1770.3ms)
+Completed 200 OK in 1882ms (Views: 1815.4ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:28:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (487.1ms)
+Completed 200 OK in 623ms (Views: 519.5ms | ActiveRecord: 13.6ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:30:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ETxlyZ91RrAjBwc8zvKcmTIU6K7bRV993zZm6O6vvKcXI3/I/wa7ufhsI3Wp3vCxTIsPNJHHWmmtSLwj52fiRQ==", "province"=>{"name"=>"Newfoundland and Labrador", "pst"=>"0", "gst"=>"0", "hst"=>"15"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Newfoundland and Labrador"], ["pst", 0.0], ["gst", 0.0], ["hst", 15.0], ["created_at", "2017-11-22 23:30:09.614273"], ["updated_at", "2017-11-22 23:30:09.614273"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/6
+Completed 302 Found in 206ms (ActiveRecord: 24.6ms)
+
+
+Started GET "/admin/provinces/6" for 10.0.2.2 at 2017-11-22 23:30:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 6 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 6 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (517.8ms)
+Completed 200 OK in 662ms (Views: 542.7ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:30:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (446.2ms)
+Completed 200 OK in 589ms (Views: 474.1ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:31:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (471.8ms)
+Completed 200 OK in 625ms (Views: 505.5ms | ActiveRecord: 15.7ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:32:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPbBkRD7waJxtvzQvITaIIJmFuKSZVSUA7pJvTKLTY3G6duQcIg8q6rd2JnbqLYI/PnxeNjnUYBxxJN2O0MTbw==", "province"=>{"name"=>"New Brunswick", "pst"=>"0", "gst"=>"0", "hst"=>"15"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "New Brunswick"], ["pst", 0.0], ["gst", 0.0], ["hst", 15.0], ["created_at", "2017-11-22 23:32:10.632293"], ["updated_at", "2017-11-22 23:32:10.632293"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/7
+Completed 302 Found in 219ms (ActiveRecord: 23.8ms)
+
+
+Started GET "/admin/provinces/7" for 10.0.2.2 at 2017-11-22 23:32:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 7 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 7 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (468.3ms)
+Completed 200 OK in 608ms (Views: 498.3ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:32:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.4ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (438.4ms)
+Completed 200 OK in 569ms (Views: 466.9ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:32:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (448.5ms)
+Completed 200 OK in 584ms (Views: 481.4ms | ActiveRecord: 14.3ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:33:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C7JtzJ//UXwb+TrmVOAuOmOkeM9nyAW4dPv7u6NLreMNrXfN/4ysdcCSHq8zzEISHTufVS1KAKwGhSFwqoPzAQ==", "province"=>{"name"=>"Prince Edward Island", "pst"=>"0", "gst"=>"0", "hst"=>"15"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Prince Edward Island"], ["pst", 0.0], ["gst", 0.0], ["hst", 15.0], ["created_at", "2017-11-22 23:33:53.731577"], ["updated_at", "2017-11-22 23:33:53.731577"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/8
+Completed 302 Found in 197ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/admin/provinces/8" for 10.0.2.2 at 2017-11-22 23:33:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 8 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 8 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (450.1ms)
+Completed 200 OK in 584ms (Views: 478.6ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:33:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (445.5ms)
+Completed 200 OK in 573ms (Views: 472.2ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:34:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (468.0ms)
+Completed 200 OK in 616ms (Views: 502.9ms | ActiveRecord: 14.3ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:34:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"41rCDYFtAfgzWSWaue9RxrKeAAzS+q9q6j1O6hzh+G7lRdgM4R788egyAdPewz3uzAHnlph4qn6YQ5QhFSmmjA==", "province"=>{"name"=>"Quebec", "pst"=>"9.975", "gst"=>"5", "hst"=>"0"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Quebec"], ["pst", 9.975], ["gst", 5.0], ["hst", 0.0], ["created_at", "2017-11-22 23:34:23.732824"], ["updated_at", "2017-11-22 23:34:23.732824"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/9
+Completed 302 Found in 207ms (ActiveRecord: 23.5ms)
+
+
+Started GET "/admin/provinces/9" for 10.0.2.2 at 2017-11-22 23:34:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 9 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 9 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (492.8ms)
+Completed 200 OK in 633ms (Views: 521.4ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:34:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (438.1ms)
+Completed 200 OK in 579ms (Views: 465.0ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:34:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (496.1ms)
+Completed 200 OK in 640ms (Views: 535.6ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:35:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eOtPoHVlGw/OcRDDe9D/5E+QJTe1mFQnx3hwDXGdLIp+9FWhFRbmBhUaNIoc/JPMMQ/Crf8aUTO1BqrGeFVyaA==", "province"=>{"name"=>"Northwest Territories", "pst"=>"0", "gst"=>"5", "hst"=>"0"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Northwest Territories"], ["pst", 0.0], ["gst", 5.0], ["hst", 0.0], ["created_at", "2017-11-22 23:35:37.783546"], ["updated_at", "2017-11-22 23:35:37.783546"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/10
+Completed 302 Found in 200ms (ActiveRecord: 25.9ms)
+
+
+Started GET "/admin/provinces/10" for 10.0.2.2 at 2017-11-22 23:35:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 10 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 10 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (473.8ms)
+Completed 200 OK in 613ms (Views: 503.6ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:35:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (434.3ms)
+Completed 200 OK in 564ms (Views: 461.5ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:35:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (447.3ms)
+Completed 200 OK in 582ms (Views: 480.1ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:36:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"erTd2tTv3C/vXGMBy0MbNlF2m9hjQS0Aw6L/Ft+4Ds98q8fbtJwhJjQ3R0isb3ceL+l8QinDKBSx3CXd1nBQLQ==", "province"=>{"name"=>"Yukon", "pst"=>"0", "gst"=>"5", "hst"=>"0"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Yukon"], ["pst", 0.0], ["gst", 5.0], ["hst", 0.0], ["created_at", "2017-11-22 23:36:09.873120"], ["updated_at", "2017-11-22 23:36:09.873120"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/11
+Completed 302 Found in 207ms (ActiveRecord: 26.1ms)
+
+
+Started GET "/admin/provinces/11" for 10.0.2.2 at 2017-11-22 23:36:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 11 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 11 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (450.5ms)
+Completed 200 OK in 585ms (Views: 478.6ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:36:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (443.7ms)
+Completed 200 OK in 576ms (Views: 471.8ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:36:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (445.6ms)
+Completed 200 OK in 577ms (Views: 477.4ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:36:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HIUnDf36NbY3HkKuvrUytQUU0sZzsnfYv/HxxcYH39gamj0MnYnIv+x1ZufZmV6de4s1XDkwcszNjysOz8+BOg==", "province"=>{"name"=>"Nunvaut", "pst"=>"0", "gst"=>"5", "hst"=>"0"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (24.1ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nunvaut"], ["pst", 0.0], ["gst", 5.0], ["hst", 0.0], ["created_at", "2017-11-22 23:36:40.567001"], ["updated_at", "2017-11-22 23:36:40.567001"]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/12
+Completed 302 Found in 216ms (ActiveRecord: 46.6ms)
+
+
+Started GET "/admin/provinces/12" for 10.0.2.2 at 2017-11-22 23:36:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 12 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 12 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (463.9ms)
+Completed 200 OK in 597ms (Views: 491.3ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:36:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.4ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (435.7ms)
+Completed 200 OK in 565ms (Views: 462.6ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/admin/provinces/new" for 10.0.2.2 at 2017-11-22 23:37:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (434.1ms)
+Completed 200 OK in 566ms (Views: 466.8ms | ActiveRecord: 13.5ms)
+
+
+Started POST "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:37:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DUdtWIzfDbYKq5JaR4T2aa+SlSU4rzcQ+Vm2g0He/awLWHdZ7Kzwv9HAthMgqJpB0Q1yv3ItMgSLJ2xISBajTg==", "province"=>{"name"=>"Nova Scotia", "pst"=>"0", "gst"=>"0", "hst"=>"15"}, "commit"=>"Create Province"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "provinces" ("name", "pst", "gst", "hst", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nova Scotia"], ["pst", 0.0], ["gst", 0.0], ["hst", 15.0], ["created_at", "2017-11-22 23:37:52.718384"], ["updated_at", "2017-11-22 23:37:52.718384"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/13
+Completed 302 Found in 199ms (ActiveRecord: 23.5ms)
+
+
+Started GET "/admin/provinces/13" for 10.0.2.2 at 2017-11-22 23:37:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 13 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 13 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (458.6ms)
+Completed 200 OK in 593ms (Views: 487.5ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:37:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (438.0ms)
+Completed 200 OK in 566ms (Views: 465.7ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-22 23:38:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (1.7ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (23.1ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 749ms (Views: 686.9ms | ActiveRecord: 14.6ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20171122234036)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar, "pst_rate" decimal, "gst_rate" decimal, "hst_rate" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171122234036"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_consoles_on_product_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_consoles_on_product_type_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:43:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.8ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (1823.4ms)
+Completed 200 OK in 1944ms (Views: 1871.3ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2017-11-22 23:43:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  [1m[36mAdminUser Load (1.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (526.7ms)
+Completed 200 OK in 666ms (Views: 553.5ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/admin/orders" for 10.0.2.2 at 2017-11-22 23:43:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (439.0ms)
+Completed 200 OK in 583ms (Views: 472.1ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/admin/provinces" for 10.0.2.2 at 2017-11-22 23:43:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mAdminUser Load (1.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "provinces"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" ORDER BY "provinces"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (484.8ms)
+Completed 200 OK in 625ms (Views: 513.4ms | ActiveRecord: 21.3ms)
+
+

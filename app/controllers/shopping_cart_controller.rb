@@ -13,7 +13,7 @@ class ShoppingCartController < ApplicationController
 	end
 
 	def checkout
-		
+		@provinces = Province.all
 	end
 
 	def update

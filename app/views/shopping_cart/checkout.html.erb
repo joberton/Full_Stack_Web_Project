@@ -16,7 +16,7 @@
 	<%= form.text_field :email %></br>
 
 	<%= form.label :province %>
-	<%= select_tag "province", options_for_select(["Manitoba"]) %></br>
+	<%= select_tag "province", options_for_select(@provinces.collect{|province| [province.name,province.id]}) %></br>
 
 	<%= form.submit %>
 <% end %>
