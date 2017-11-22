@@ -1,4 +1,7 @@
 class ShoppingCartController < ApplicationController
+	
+	before_action :authenticate_user!
+
 	def index
 		@shopping_cart = session[:cart]
 	end

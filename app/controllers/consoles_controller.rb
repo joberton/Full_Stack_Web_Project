@@ -1,6 +1,7 @@
 class ConsolesController < ApplicationController
 	
 	before_action :find_console, only: [:show,:edit,:destory,:update,:add_to_cart]
+	before_action :authenticate_user!
 
 	def index
 		@consoles = params[:search] ?  Console.where("name LIKE ?", "%#{params[:search]}%").order(:name).page(params[:page]).per(8) : Console.all.page(params[:page]).per(8)

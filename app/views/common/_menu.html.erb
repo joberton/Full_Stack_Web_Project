@@ -1,12 +1,15 @@
 <header>
 	<h1>Nostalgic Geeks</h1>
-	<nav id="navbar">
-		<ul>
-			<li><%= link_to 'home', "/" %> </li>
-			<li><%= link_to 'games', games_url %> </li>
-			<li><%= link_to 'consoles', consoles_url %></li>
-			<li><%= link_to 'genres', genres_url %></li>
-			<li><%= link_to 'shopping cart', shopping_cart_index_url %> </li>
-		</ul>
-	</nav>
+	<% if user_signed_in? %>
+		<nav id="navbar">
+			<ul>
+				<li><%= link_to 'home', "/" %> </li>
+				<li><%= link_to 'games', games_url %> </li>
+				<li><%= link_to 'consoles', consoles_url %></li>
+				<li><%= link_to 'genres', genres_url %></li>
+				<li><%= link_to 'shopping cart', shopping_cart_index_url %> </li>
+				<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+			</ul>
+		</nav>
+	<% end %>
 </header>

@@ -2,6 +2,7 @@ class GamesController < ApplicationController
 	
 	before_action :find_game, only: [:show,:edit,:destory,:update,:add_to_cart]
 	before_action :fetch_releated_data, only: [:index,:new,:edit,:update,:create]
+	before_action :authenticate_user!
 		
 	def index
 		@games = Game.all.page(params[:page]).per(8).order(:name)
