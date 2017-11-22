@@ -8,11 +8,13 @@ class ShoppingCartController < ApplicationController
 
 	def destroy
 		session[:cart].delete_at(params[:id].to_i)
+		flash[:notice] = "Item removed successfully"
 		redirect_to shopping_cart_index_url
 	end
 
 	def update
 		session[:cart][params[:id].to_i]["quantity"] = params[:quantity]
+		flash[:notice] = "Item updated successfully"
 		redirect_to shopping_cart_index_url
 	end
 
