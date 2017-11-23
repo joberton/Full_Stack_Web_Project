@@ -1,22 +1,35 @@
 <h1>Checkout!!!</h1>
 <%= form_with url: shopping_cart_index_url, local: true do |form| %>
-	<%= form.label :first_name %>
+	<%= form.label :first_name %></br>
 	<%= form.text_field :first_name %></br>
 
-	<%= form.label :last_name %>
+	<%= form.label :last_name %></br>
 	<%= form.text_field :last_name %></br>
 
-	<%= form.label :address %>
+	<%= form.label :address %></br>
 	<%= form.text_field :address %></br>
 
-	<%= form.label :postal_code %>
+	<%= form.label :postal_code %></br>
 	<%= form.text_field :postal_code %></br>
 
-	<%= form.label :email %>
+	<%= form.label :email %></br>
 	<%= form.text_field :email %></br>
 
-	<%= form.label :province %>
+	<%= form.label :province %></br>
 	<%= select_tag "province", options_for_select(@provinces.collect{|province| [province.name,province.id]}) %></br>
+	<div id="invoice_container">
+		<h1>Invoice:</h1>
+		<% @shopping_cart.each do |item| %>
+			<ul>
+				<li><h3><%= item["name"] %></h3></li>
+				<li><strong>Price: <%= item["price"] %></strong></li>
+				<li><strong>Quantity: <%= item["quantity"] %></strong></li>
+				<li><strong>Gst: 0.05</strong></li>
+				<li><strong>Pst: 0.08</strong></li>
+				<li><strong>Hst: 0.0</strong></li>
+			</ul>
+		<% end %>
+	</div>
 
 	<%= form.submit %>
 <% end %>

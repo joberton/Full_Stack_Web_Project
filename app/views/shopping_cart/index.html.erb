@@ -1,5 +1,5 @@
 <h1>Hoi it shopping cart</h1>
-<h1>Test Data: <%= @shopping_cart.inspect%> </h1>
+<h1>Test Data: <%= User.first.inspect %> </h1>
 <% @shopping_cart.each_with_index do |item,index| %>
 	<ul id="products">
 		<li><%= item["name"] %></li>

@@ -1,9 +1,10 @@
 class ShoppingCartController < ApplicationController
 	
 	before_action :authenticate_user!
+	before_action :set_cart, only: [:index,:checkout]
 
 	def index
-		@shopping_cart = session[:cart]
+		
 	end
 
 	def destroy
@@ -25,4 +26,9 @@ class ShoppingCartController < ApplicationController
 	def edit
 		@cart_item = params[:id]
 	end
+
+	private
+		def set_cart
+			@shopping_cart = session[:cart]
+		end
 end
