@@ -5,12 +5,12 @@ class GamesController < ApplicationController
 	before_action :authenticate_user!
 		
 	def index
-		@games = Game.all.page(params[:page]).per(8).order(:name)
+		@games = Game.all.page(params[:page]).per(5).order(:name)
 		if(!params[:search].nil?)
-			@games = !params[:console].empty? ? Game.where("name LIKE ?", "%#{params[:search]}%").where(console_id: params[:console]).order(:name).page(params[:page]).per(8) : Game.where("name LIKE ?", "%#{params[:search]}%").order(:name).page(params[:page]).per(8)
+			@games = !params[:console].empty? ? Game.where("name LIKE ?", "%#{params[:search]}%").where(console_id: params[:console]).order(:name).page(params[:page]).per(5) : Game.where("name LIKE ?", "%#{params[:search]}%").order(:name).page(params[:page]).per(5)
 			#rails is being super effey about the or statement in activerecord needed this to filter on the genre
 			if !params[:genre].empty?
-				@games = @games.where(genre_id: params[:genre]).page(params[:page]).per(8);
+				@games = @games.where(genre_id: params[:genre]).page(params[:page]).per(5);
 			end
 		end
 	end

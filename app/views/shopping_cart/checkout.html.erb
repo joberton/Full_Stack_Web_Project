@@ -24,9 +24,9 @@
 				<li><h3><%= item["name"] %></h3></li>
 				<li><strong>Price: <%= item["price"] %></strong></li>
 				<li><strong>Quantity: <%= item["quantity"] %></strong></li>
-				<li><strong>Gst: 0.05</strong></li>
-				<li><strong>Pst: 0.08</strong></li>
-				<li><strong>Hst: 0.0</strong></li>
+				<li><strong>Gst: <%= @taxes[:GST] %></strong></li>
+				<li><strong>Pst: <%= @taxes[:PST] %></strong></li>
+				<li><strong>Hst: <%= @taxes[:HST] %></strong></li>
 			</ul>
 		<% end %>
 	</div>

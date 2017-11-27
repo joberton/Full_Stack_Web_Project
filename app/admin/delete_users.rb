@@ -1,3 +1,3 @@
 ActiveAdmin.register User do
-permit_params :province_id
+#permit_params :province_id
 end

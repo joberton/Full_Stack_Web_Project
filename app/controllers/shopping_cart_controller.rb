@@ -15,6 +15,7 @@ class ShoppingCartController < ApplicationController
 
 	def checkout
 		@provinces = Province.all
+		@taxes = {GST: current_user.province.gst, PST: current_user.province.pst, HST: current_user.province.hst}
 	end
 
 	def update
