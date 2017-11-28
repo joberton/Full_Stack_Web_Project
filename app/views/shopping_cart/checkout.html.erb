@@ -15,20 +15,22 @@
 	<%= form.label :email %></br>
 	<%= form.text_field :email %></br>
 
-	<%= form.label :province %></br>
-	<%= select_tag "province", options_for_select(@provinces.collect{|province| [province.name,province.id]}) %></br>
 	<div id="invoice_container">
 		<h1>Invoice:</h1>
-		<% @shopping_cart.each do |item| %>
-			<ul>
+		<ul id="products">
+			<% @shopping_cart.each do |item| %>
 				<li><h3><%= item["name"] %></h3></li>
 				<li><strong>Price: <%= item["price"] %></strong></li>
-				<li><strong>Quantity: <%= item["quantity"] %></strong></li>
-				<li><strong>Gst: <%= @taxes[:GST] %></strong></li>
-				<li><strong>Pst: <%= @taxes[:PST] %></strong></li>
-				<li><strong>Hst: <%= @taxes[:HST] %></strong></li>
-			</ul>
-		<% end %>
+				<li><strong>Quantity: <%= item["quantity"]%></strong></li>
+				<li><strong>Total: <%= item["price"].to_d * item["quantity"].to_i %></strong></li>
+				<hr>
+			<% end %>
+			<li><strong>SubTotal: <%= @order_summary[:sub_total] %></strong></li>
+			<li><strong>Gst Amount: <%= @order_summary[:gst_amount] %></strong></li>
+			<li><strong>Pst Amount: <%= @order_summary[:pst_amount] %></strong></li>
+			<li><strong>Hst Amount: <%= @order_summary[:hst_amount] %></strong></li>
+			<li><strong>Grand Total: <%= @order_summary[:grand_total] %></strong></li>
+		</ul>
 	</div>
 
 	<%= form.submit %>

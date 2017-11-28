@@ -14,8 +14,15 @@ class ShoppingCartController < ApplicationController
 	end
 
 	def checkout
-		@provinces = Province.all
-		@taxes = {GST: current_user.province.gst, PST: current_user.province.pst, HST: current_user.province.hst}
+		@tax_rates = {GST: current_user.province.gst/100, PST: current_user.province.pst/100, HST: current_user.province.hst/100}
+		@order_summary = {sub_total: 0, gst_amount: 0, pst_amount: 0, hst_amount: 0, grand_total: 0}
+		@shopping_cart.each do |item|
+			@order_summary[:sub_total] += item["price"].to_d * item["quantity"].to_i
+		end
+		@order_summary[:gst_amount] = @order_summary[:sub_total] * @tax_rates[:GST]
+		@order_summary[:pst_amount] = @order_summary[:sub_total] * @tax_rates[:PST]
+		@order_summary[:hst_amount] = @order_summary[:sub_total] * @tax_rates[:HST]
+		@order_summary[:grand_total] = @order_summary[:sub_total] + @order_summary[:hst_amount] + @order_summary[:pst_amount] + @order_summary[:gst_amount]
 	end
 
 	def update

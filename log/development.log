@@ -15210,3 +15210,1395 @@ Processing by GamesController#index as HTML
 Completed 200 OK in 701ms (Views: 620.3ms | ActiveRecord: 31.1ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-11-27 23:52:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-11-27 23:52:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (85.8ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 2198ms (Views: 2166.3ms | ActiveRecord: 9.2ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-11-27 23:52:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WC0RwtnB2mmCxFD2tAyOsyLw2st9rSfT5SnWJ3ROGiVScSrDpK+cJabwfVuINz4RkB91AB/Z4IFppmXVGijMtw==", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-27 23:52:12.747367"], ["last_sign_in_at", "2017-11-27 21:51:27.183815"], ["sign_in_count", 3], ["id", 1]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 317ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-27 23:52:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (0.8ms)
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (37.1ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 566ms (Views: 509.5ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/games/3" for 10.0.2.2 at 2017-11-27 23:52:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.4ms)
+  Rendered common/_menu.html.erb (0.7ms)
+Completed 200 OK in 658ms (Views: 572.1ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/games/3/add_shopping_cart" for 10.0.2.2 at 2017-11-27 23:52:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#add_to_cart as HTML
+  Parameters: {"game_id"=>"3"}
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 54ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-27 23:52:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.8ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 558ms (Views: 503.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-27 23:52:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (5.8ms)
+  Rendered common/_menu.html.erb (0.7ms)
+Completed 200 OK in 643ms (Views: 534.3ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/consoles" for 10.0.2.2 at 2017-11-27 23:52:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/index.html.erb within layouts/application
+  Rendered common/_search.html.erb (0.8ms)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "consoles"[0m
+  [1m[36mConsole Load (1.3ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered consoles/index.html.erb within layouts/application (61.3ms)
+  Rendered common/_menu.html.erb (0.7ms)
+Completed 200 OK in 587ms (Views: 525.5ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/consoles/3" for 10.0.2.2 at 2017-11-27 23:52:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConsole Load (1.2ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" WHERE "consoles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/show.html.erb within layouts/application
+  Rendered consoles/show.html.erb within layouts/application (1.3ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 566ms (Views: 501.1ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/consoles/3/add_shopping_cart" for 10.0.2.2 at 2017-11-27 23:52:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#add_to_cart as HTML
+  Parameters: {"console_id"=>"3"}
+  [1m[36mConsole Load (1.8ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" WHERE "consoles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 54ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-27 23:52:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.5ms)
+  Rendered common/_menu.html.erb (0.7ms)
+Completed 200 OK in 571ms (Views: 511.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-27 23:52:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (6.8ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 581ms (Views: 506.0ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-27 23:53:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (2.0ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (6.9ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 594ms (Views: 514.2ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:02:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.7ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (5.6ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 579ms (Views: 502.9ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:03:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (6.3ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 603ms (Views: 517.4ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:03:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (6.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 643ms (Views: 557.5ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:04:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.4ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  [1m[36mProvince Load (2.1ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered shopping_cart/checkout.html.erb within layouts/application (7.1ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 648ms (Views: 562.4ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:05:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.5ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 659ms (Views: 575.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:07:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.0ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 594ms (Views: 515.3ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:09:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.1ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 651ms (Views: 566.7ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:09:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.4ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.4ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 655ms (Views: 566.7ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:09:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.1ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 661ms (Views: 575.6ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:10:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.3ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 580ms (Views: 498.9ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:10:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.0ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 660ms (Views: 569.1ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:11:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.2ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 653ms (Views: 567.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:11:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.9ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.2ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 647ms (Views: 564.4ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:11:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.6ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 591ms (Views: 540.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/shopping_cart/1/edit" for 10.0.2.2 at 2017-11-28 00:11:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/edit.html.erb within layouts/application
+  Rendered shopping_cart/edit.html.erb within layouts/application (8.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 628ms (Views: 570.1ms | ActiveRecord: 8.4ms)
+
+
+Started PATCH "/shopping_cart/1" for 10.0.2.2 at 2017-11-28 00:11:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wFKwZG3oA1F3nuLzCK173G5nj16S6Ydgb5loHmujf7S896xSUMPu/lgukUYiQYfnbuT7uvX3JklSQ6Io/acosQ==", "quantity"=>"3", "commit"=>"Save ", "id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 32ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:11:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.9ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 577ms (Views: 522.7ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:11:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (25.5ms)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 15.7ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    22: 				<li><h3><%= item["name"] %></h3></li>
+    23: 				<li><strong>Price: <%= item["price"] %></strong></li>
+    24: 				<li><strong>Quantity: <%= item["quantity"]%></strong></li>
+    25: 				<li><strong>Total: <%= item["price"] * item["quantity"] %></strong></li>
+    26: 				<hr>
+    27: 			<% end %>
+    28: 			<li><strong>SubTotal: 0.0</strong></li>
+  
+app/views/shopping_cart/checkout.html.erb:25:in `*'
+app/views/shopping_cart/checkout.html.erb:25:in `block (2 levels) in _app_views_shopping_cart_checkout_html_erb__115594331_119852580'
+app/views/shopping_cart/checkout.html.erb:21:in `each'
+app/views/shopping_cart/checkout.html.erb:21:in `block in _app_views_shopping_cart_checkout_html_erb__115594331_119852580'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331_119852580'
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:11:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.0ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 558ms (Views: 505.7ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/shopping_cart/1/edit" for 10.0.2.2 at 2017-11-28 00:11:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/edit.html.erb within layouts/application
+  Rendered shopping_cart/edit.html.erb within layouts/application (1.9ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 565ms (Views: 511.0ms | ActiveRecord: 8.1ms)
+
+
+Started PATCH "/shopping_cart/1" for 10.0.2.2 at 2017-11-28 00:12:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/24Cs0DmFfn7gn9/rFkMx8R38KT50AdouZ1KiF1LNN2Dyx6Ffc34VtQyDMqGtfD8xPSEQJ7OpkGER4C+y09j2A==", "quantity"=>"1", "commit"=>"Save ", "id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 36ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:12:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.4ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 625ms (Views: 566.1ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:12:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 14.7ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    22: 				<li><h3><%= item["name"] %></h3></li>
+    23: 				<li><strong>Price: <%= item["price"] %></strong></li>
+    24: 				<li><strong>Quantity: <%= item["quantity"]%></strong></li>
+    25: 				<li><strong>Total: <%= item["price"] * item["quantity"] %></strong></li>
+    26: 				<hr>
+    27: 			<% end %>
+    28: 			<li><strong>SubTotal: 0.0</strong></li>
+  
+app/views/shopping_cart/checkout.html.erb:25:in `*'
+app/views/shopping_cart/checkout.html.erb:25:in `block (2 levels) in _app_views_shopping_cart_checkout_html_erb__115594331_118218550'
+app/views/shopping_cart/checkout.html.erb:21:in `each'
+app/views/shopping_cart/checkout.html.erb:21:in `block in _app_views_shopping_cart_checkout_html_erb__115594331_118218550'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331_118218550'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:12:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.9ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (24.6ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 15.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion from nil to integer):
+    22: 				<li><h3><%= item["name"] %></h3></li>
+    23: 				<li><strong>Price: <%= item["price"] %></strong></li>
+    24: 				<li><strong>Quantity: <%= item["quantity"]%></strong></li>
+    25: 				<li><strong>Total: <%= item["price"] * item[:quantity] %></strong></li>
+    26: 				<hr>
+    27: 			<% end %>
+    28: 			<li><strong>SubTotal: 0.0</strong></li>
+  
+app/views/shopping_cart/checkout.html.erb:25:in `*'
+app/views/shopping_cart/checkout.html.erb:25:in `block (2 levels) in _app_views_shopping_cart_checkout_html_erb__115594331_117989870'
+app/views/shopping_cart/checkout.html.erb:21:in `each'
+app/views/shopping_cart/checkout.html.erb:21:in `block in _app_views_shopping_cart_checkout_html_erb__115594331_117989870'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331_117989870'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:12:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 13.6ms)
+
+
+  
+SyntaxError (/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/views/shopping_cart/checkout.html.erb:25: syntax error, unexpected ']'
+...item["price"] * item[quantity:] );@output_buffer.safe_append...
+...                               ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/views/shopping_cart/checkout.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;			 end 
+         			    ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/views/shopping_cart/checkout.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end ;
+             ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/views/shopping_cart/checkout.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/views/shopping_cart/checkout.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/shopping_cart/checkout.html.erb:25: syntax error, unexpected ']'
+app/views/shopping_cart/checkout.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+app/views/shopping_cart/checkout.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+app/views/shopping_cart/checkout.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/shopping_cart/checkout.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:12:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (2.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (26.5ms)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 17.2ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    22: 				<li><h3><%= item["name"] %></h3></li>
+    23: 				<li><strong>Price: <%= item["price"] %></strong></li>
+    24: 				<li><strong>Quantity: <%= item["quantity"]%></strong></li>
+    25: 				<li><strong>Total: <%= item["price"] * item["quantity"] %></strong></li>
+    26: 				<hr>
+    27: 			<% end %>
+    28: 			<li><strong>SubTotal: 0.0</strong></li>
+  
+app/views/shopping_cart/checkout.html.erb:25:in `*'
+app/views/shopping_cart/checkout.html.erb:25:in `block (2 levels) in _app_views_shopping_cart_checkout_html_erb__115594331_119639180'
+app/views/shopping_cart/checkout.html.erb:21:in `each'
+app/views/shopping_cart/checkout.html.erb:21:in `block in _app_views_shopping_cart_checkout_html_erb__115594331_119639180'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331_119639180'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:13:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.2ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 650ms (Views: 565.4ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:13:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:13:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.2ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 587ms (Views: 524.3ms | ActiveRecord: 9.6ms)
+
+
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.6ms)
+  Rendered common/_menu.html.erb (0.4ms)
+Completed 200 OK in 564ms (Views: 507.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/shopping_cart/1/edit" for 10.0.2.2 at 2017-11-28 00:13:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/edit.html.erb within layouts/application
+  Rendered shopping_cart/edit.html.erb within layouts/application (2.0ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 586ms (Views: 528.2ms | ActiveRecord: 8.1ms)
+
+
+Started PATCH "/shopping_cart/1" for 10.0.2.2 at 2017-11-28 00:13:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xA4PjeBWJjMEWKxOjtIN4NuhaUvphL8Hs8VsS2jgQ+S4qxO73X3LnCvo3/ukPvHb2yIdr46aHi6OH6Z9/uQU4Q==", "quantity"=>"3", "commit"=>"Save ", "id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 36ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:13:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.9ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 632ms (Views: 566.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:13:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.1ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 595ms (Views: 512.7ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:14:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (2.8ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 596ms (Views: 518.9ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:21:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.5ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 586ms (Views: 503.5ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:21:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (26.2ms)
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 12.6ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+    25: 				<li><strong>Total: <%= item["price"].to_d * item["quantity"].to_i %></strong></li>
+    26: 				<hr>
+    27: 			<% end %>
+    28: 			<li><strong>SubTotal: <%= @shopping_cart["price"] %></strong></li>
+    29: 			<li><strong>Gst Amount: <%= @tax_rates[:GST] %></strong></li>
+    30: 			<li><strong>Pst Amount: <%= @tax_rates[:PST] %></strong></li>
+    31: 			<li><strong>Hst Amount: <%= @tax_rates[:HST] %></strong></li>
+  
+app/views/shopping_cart/checkout.html.erb:28:in `[]'
+app/views/shopping_cart/checkout.html.erb:28:in `block in _app_views_shopping_cart_checkout_html_erb__115594331_113117630'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331_113117630'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:22:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.4ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 677ms (Views: 587.6ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:25:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.3ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 584ms (Views: 508.3ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:25:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (24.2ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 13.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `sum' for #<BigDecimal:e383ac0,'0.2999E2',18(18)>
+Did you mean?  sub):
+    23: 				<li><strong>Price: <%= item["price"] %></strong></li>
+    24: 				<li><strong>Quantity: <%= item["quantity"]%></strong></li>
+    25: 				<li><strong>Total: <%= item["price"].to_d * item["quantity"].to_i %></strong></li>
+    26: 				<li><strong>SubTotal: <%= item["price"].to_d.sum %></strong></li>
+    27: 				<hr>
+    28: 			<% end %>
+    29: 			<li><strong>Gst Amount: <%= @tax_rates[:GST] %></strong></li>
+  
+app/views/shopping_cart/checkout.html.erb:26:in `block (2 levels) in _app_views_shopping_cart_checkout_html_erb__115594331_119386700'
+app/views/shopping_cart/checkout.html.erb:21:in `each'
+app/views/shopping_cart/checkout.html.erb:21:in `block in _app_views_shopping_cart_checkout_html_erb__115594331_119386700'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331_119386700'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:26:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.3ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 641ms (Views: 557.5ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:31:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (23.6ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 14.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for :price:Symbol):
+    25: 				<li><strong>Total: <%= item["price"].to_d * item["quantity"].to_i %></strong></li>
+    26: 				<hr>
+    27: 			<% end %>
+    28: 			<li><strong>SubTotal: <%= @shopping_cart.sum(:price)  %></strong></li>
+    29: 			<li><strong>Gst Amount: <%= @tax_rates[:GST] %></strong></li>
+    30: 			<li><strong>Pst Amount: <%= @tax_rates[:PST] %></strong></li>
+    31: 			<li><strong>Hst Amount: <%= @tax_rates[:HST] %></strong></li>
+  
+app/views/shopping_cart/checkout.html.erb:28:in `block in _app_views_shopping_cart_checkout_html_erb__115594331_118293290'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331_118293290'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:33:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (196.1ms)
+Completed 500 Internal Server Error in 352ms (ActiveRecord: 13.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `currency' for #<#<Class:0xb1ec839c>:0xb1e79c88>
+Did you mean?  current_cycle):
+    20: 		<ul>
+    21: 			<% @shopping_cart.each do |item| %>
+    22: 				<li><h3><%= item["name"] %></h3></li>
+    23: 				<li><strong>Price: <%= currency(item["price"]) %></strong></li>
+    24: 				<li><strong>Quantity: <%= item["quantity"]%></strong></li>
+    25: 				<li><strong>Total: <%= currency(item["price"].to_d * item["quantity"].to_i) %></strong></li>
+    26: 				<hr>
+  
+app/views/shopping_cart/checkout.html.erb:23:in `block (2 levels) in _app_views_shopping_cart_checkout_html_erb__115594331__654949158'
+app/views/shopping_cart/checkout.html.erb:21:in `each'
+app/views/shopping_cart/checkout.html.erb:21:in `block in _app_views_shopping_cart_checkout_html_erb__115594331__654949158'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331__654949158'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:33:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (5.9ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 610ms (Views: 524.5ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (4.6ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 601ms (Views: 518.7ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:35:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.2ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 554ms (Views: 476.1ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:35:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (28.6ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 576ms (Views: 499.3ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:38:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (0.9ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.6ms)
+  Rendered common/_menu.html.erb (0.7ms)
+Completed 200 OK in 582ms (Views: 506.7ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:39:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (354.2ms)
+Completed 500 Internal Server Error in 492ms (ActiveRecord: 13.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tax_rates' for #<#<Class:0xdaf5ee4>:0xdaf4d64>
+Did you mean?  @tax_rates):
+    33: 				<hr>
+    34: 			<% end %>
+    35: 			<% 
+    36: 				gst_amount = sub_total * tax_rates[:GST]
+    37: 				pst_amount = sub_total * tax_rates[:PST]
+    38: 				hst_amount = sub_total * tax_rates[:HST]
+    39: 			%>
+  
+app/views/shopping_cart/checkout.html.erb:36:in `block in _app_views_shopping_cart_checkout_html_erb__115594331_114799150'
+app/views/shopping_cart/checkout.html.erb:2:in `_app_views_shopping_cart_checkout_html_erb__115594331_114799150'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:39:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (2.4ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 568ms (Views: 494.6ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:40:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.6ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 588ms (Views: 513.3ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:45:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/shopping_cart_controller.rb:18: syntax error, unexpected '{', expecting keyword_end
+		@order_summary {sub_total: 0, gst_amount: 0, ...
+		                ^):
+  
+app/controllers/shopping_cart_controller.rb:18: syntax error, unexpected '{', expecting keyword_end
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:45:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/shopping_cart_controller.rb:18: syntax error, unexpected '{', expecting keyword_end
+		@order_summary {sub_total: 0}
+		                ^):
+  
+app/controllers/shopping_cart_controller.rb:18: syntax error, unexpected '{', expecting keyword_end
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:46:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/shopping_cart_controller.rb:18: syntax error, unexpected '{', expecting keyword_end
+		@order_summary {sub_total: 0, gst_amount: 0, ...
+		                ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/shopping_cart_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/shopping_cart_controller.rb:18: syntax error, unexpected '{', expecting keyword_end
+app/controllers/shopping_cart_controller.rb:40: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:47:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.4ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 595ms (Views: 519.1ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:47:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.5ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (5.5ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 629ms (Views: 549.2ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:48:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 13.5ms)
+
+
+  
+NameError (undefined local variable or method `order_summary' for #<ShoppingCartController:0xe391f44>
+Did you mean?  @order_summary):
+  
+app/controllers/shopping_cart_controller.rb:20:in `block in checkout'
+app/controllers/shopping_cart_controller.rb:19:in `each'
+app/controllers/shopping_cart_controller.rb:19:in `checkout'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:48:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 16.4ms)
+
+
+  
+TypeError (String can't be coerced into Fixnum):
+  
+app/controllers/shopping_cart_controller.rb:20:in `+'
+app/controllers/shopping_cart_controller.rb:20:in `block in checkout'
+app/controllers/shopping_cart_controller.rb:19:in `each'
+app/controllers/shopping_cart_controller.rb:19:in `checkout'
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:49:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (4.4ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 633ms (Views: 551.9ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:50:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.5ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.6ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 680ms (Views: 578.4ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:52:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.6ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 610ms (Views: 519.4ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:54:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (4.5ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 617ms (Views: 534.7ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/games" for 10.0.2.2 at 2017-11-28 00:56:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mConsole Load (1.2ms)[0m  [1m[34mSELECT "consoles".* FROM "consoles"[0m
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered common/_search.html.erb (27.0ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "games"[0m
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered games/index.html.erb within layouts/application (101.3ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 1910ms (Views: 1832.5ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/games/2" for 10.0.2.2 at 2017-11-28 00:56:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 603ms (Views: 525.5ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/games/2/add_shopping_cart" for 10.0.2.2 at 2017-11-28 00:56:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#add_to_cart as HTML
+  Parameters: {"game_id"=>"2"}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 59ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:56:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.9ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 573ms (Views: 515.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/games" for 10.0.2.2 at 2017-11-28 00:56:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mConsole Load (1.3ms)[0m  [1m[34mSELECT "consoles".* FROM "consoles"[0m
+  [1m[36mGenre Load (1.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered common/_search.html.erb (30.6ms)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "games"[0m
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered games/index.html.erb within layouts/application (94.4ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 708ms (Views: 603.6ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/games/5" for 10.0.2.2 at 2017-11-28 00:56:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGame Load (1.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.8ms)
+  Rendered common/_menu.html.erb (1.3ms)
+Completed 200 OK in 630ms (Views: 540.9ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/games/5/add_shopping_cart" for 10.0.2.2 at 2017-11-28 00:56:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#add_to_cart as HTML
+  Parameters: {"game_id"=>"5"}
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 73ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-28 00:56:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (5.3ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 585ms (Views: 526.3ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 00:56:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (26.8ms)
+  Rendered common/_menu.html.erb (1.2ms)
+Completed 200 OK in 640ms (Views: 534.0ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/admin" for 10.0.2.2 at 2017-11-28 01:01:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 70ms
+
+
+Started GET "/admin/login" for 10.0.2.2 at 2017-11-28 01:01:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (204.8ms)
+Completed 200 OK in 625ms (Views: 597.8ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/admin/login" for 10.0.2.2 at 2017-11-28 01:01:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8uTprZdlRE6vG79QTvxjwLN4pUqpw2iY02OAYGIug4ma5P1v0w6wMbD0IhTWmVSt/GhZUO+zqAsJY4W2vaWO0w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (21.8ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2017-11-28 01:01:24.249029"], ["last_sign_in_at", "2017-11-27 20:47:30.765432"], ["sign_in_count", 10], ["updated_at", "2017-11-28 01:01:24.251199"], ["id", 1]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 337ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/admin" for 10.0.2.2 at 2017-11-28 01:01:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/page/index.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/page/index.html.arb (329.4ms)
+Completed 200 OK in 445ms (Views: 345.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/users" for 10.0.2.2 at 2017-11-28 01:01:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#index as HTML
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (2.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mProvince Load (1.4ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (567.5ms)
+Completed 200 OK in 697ms (Views: 577.5ms | ActiveRecord: 34.1ms)
+
+
+Started GET "/admin/users/1/edit" for 10.0.2.2 at 2017-11-28 01:01:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  [1m[36mProvince Load (2.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/edit.html.arb (633.8ms)
+Completed 200 OK in 775ms (Views: 661.2ms | ActiveRecord: 20.7ms)
+
+
+Started PATCH "/admin/users/1" for 10.0.2.2 at 2017-11-28 01:01:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jLAB0RDGMseSPT2pPcvhz3NmFZ1lbVdEgZ0VORMsMz44/zusI4YR4Y2XTJ+kMNfPehvh/jeLd4lLMfBQN3ALyw==", "user"=>{"province_id"=>"1", "email"=>"user@example.com", "encrypted_password"=>"[FILTERED]", "reset_password_token"=>"[FILTERED]", "reset_password_sent_at(1i)"=>"[FILTERED]", "reset_password_sent_at(2i)"=>"[FILTERED]", "reset_password_sent_at(3i)"=>"[FILTERED]", "reset_password_sent_at(4i)"=>"[FILTERED]", "reset_password_sent_at(5i)"=>"[FILTERED]", "remember_created_at(1i)"=>"", "remember_created_at(2i)"=>"", "remember_created_at(3i)"=>"", "remember_created_at(4i)"=>"", "remember_created_at(5i)"=>"", "current_sign_in_at(1i)"=>"2017", "current_sign_in_at(2i)"=>"11", "current_sign_in_at(3i)"=>"27", "current_sign_in_at(4i)"=>"23", "current_sign_in_at(5i)"=>"52", "last_sign_in_at(1i)"=>"2017", "last_sign_in_at(2i)"=>"11", "last_sign_in_at(3i)"=>"27", "last_sign_in_at(4i)"=>"21", "last_sign_in_at(5i)"=>"51", "current_sign_in_ip"=>"10.0.2.2", "last_sign_in_ip"=>"10.0.2.2"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :email, :encrypted_password, :reset_password_token, :reset_password_sent_at(1i), :reset_password_sent_at(2i), :reset_password_sent_at(3i), :reset_password_sent_at(4i), :reset_password_sent_at(5i), :remember_created_at(1i), :remember_created_at(2i), :remember_created_at(3i), :remember_created_at(4i), :remember_created_at(5i), :current_sign_in_at(1i), :current_sign_in_at(2i), :current_sign_in_at(3i), :current_sign_in_at(4i), :current_sign_in_at(5i), :last_sign_in_at(1i), :last_sign_in_at(2i), :last_sign_in_at(3i), :last_sign_in_at(4i), :last_sign_in_at(5i), :current_sign_in_ip, :last_sign_in_ip
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProvince Load (0.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.9ms)[0m  [1m[33mUPDATE "users" SET "province_id" = ? WHERE "users"."id" = ?[0m  [["province_id", 1], ["id", 1]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/users/1
+Completed 302 Found in 213ms (ActiveRecord: 25.7ms)
+
+
+Started GET "/admin/users/1" for 10.0.2.2 at 2017-11-28 01:01:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "User"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "User"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (528.8ms)
+Completed 200 OK in 683ms (Views: 549.3ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 01:01:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (5.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 602ms (Views: 521.8ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/admin/users/1/edit" for 10.0.2.2 at 2017-11-28 01:01:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  [1m[36mProvince Load (1.8ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/edit.html.arb (623.7ms)
+Completed 200 OK in 762ms (Views: 648.7ms | ActiveRecord: 22.0ms)
+
+
+Started PATCH "/admin/users/1" for 10.0.2.2 at 2017-11-28 01:01:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fba1Ce0rkJr9FDdJpOvtDwsii4Ik6HtCWWe7xdD682Ch+Y903muzvOK+Rn89ENsPAl9/4XYOW4+Ty16s9KbLlQ==", "user"=>{"province_id"=>"4", "email"=>"user@example.com", "encrypted_password"=>"[FILTERED]", "reset_password_token"=>"[FILTERED]", "reset_password_sent_at(1i)"=>"[FILTERED]", "reset_password_sent_at(2i)"=>"[FILTERED]", "reset_password_sent_at(3i)"=>"[FILTERED]", "reset_password_sent_at(4i)"=>"[FILTERED]", "reset_password_sent_at(5i)"=>"[FILTERED]", "remember_created_at(1i)"=>"", "remember_created_at(2i)"=>"", "remember_created_at(3i)"=>"", "remember_created_at(4i)"=>"", "remember_created_at(5i)"=>"", "current_sign_in_at(1i)"=>"2017", "current_sign_in_at(2i)"=>"11", "current_sign_in_at(3i)"=>"27", "current_sign_in_at(4i)"=>"23", "current_sign_in_at(5i)"=>"52", "last_sign_in_at(1i)"=>"2017", "last_sign_in_at(2i)"=>"11", "last_sign_in_at(3i)"=>"27", "last_sign_in_at(4i)"=>"21", "last_sign_in_at(5i)"=>"51", "current_sign_in_ip"=>"10.0.2.2", "last_sign_in_ip"=>"10.0.2.2"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :email, :encrypted_password, :reset_password_token, :reset_password_sent_at(1i), :reset_password_sent_at(2i), :reset_password_sent_at(3i), :reset_password_sent_at(4i), :reset_password_sent_at(5i), :remember_created_at(1i), :remember_created_at(2i), :remember_created_at(3i), :remember_created_at(4i), :remember_created_at(5i), :current_sign_in_at(1i), :current_sign_in_at(2i), :current_sign_in_at(3i), :current_sign_in_at(4i), :current_sign_in_at(5i), :last_sign_in_at(1i), :last_sign_in_at(2i), :last_sign_in_at(3i), :last_sign_in_at(4i), :last_sign_in_at(5i), :current_sign_in_ip, :last_sign_in_ip
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProvince Load (0.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (3.8ms)[0m  [1m[33mUPDATE "users" SET "province_id" = ? WHERE "users"."id" = ?[0m  [["province_id", 4], ["id", 1]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/users/1
+Completed 302 Found in 223ms (ActiveRecord: 28.1ms)
+
+
+Started GET "/admin/users/1" for 10.0.2.2 at 2017-11-28 01:01:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "User"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "User"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (501.3ms)
+Completed 200 OK in 640ms (Views: 522.4ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 01:02:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.3ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 609ms (Views: 519.1ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 01:02:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.3ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.6ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 647ms (Views: 557.7ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/admin/orders" for 10.0.2.2 at 2017-11-28 01:03:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (525.7ms)
+Completed 200 OK in 669ms (Views: 547.3ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-28 01:06:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (35.5ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 2163ms (Views: 2040.5ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/shopping_cart" for 10.0.2.2 at 2017-11-28 01:06:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for ShoppingCartController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/shopping_cart" for 10.0.2.2 at 2017-11-28 01:07:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for ShoppingCartController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/shopping_cart" for 10.0.2.2 at 2017-11-28 01:07:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b/xSfPv9Uqu8lOBHvUIMVBASDdXWHuya6bBShWQpzV3bs2gByL1xjaM+kXEkuTpUGW/5toT4zFcjHLfsQHX1qA==", "first_name"=>"", "last_name"=>"", "address"=>"", "postal_code"=>"", "email"=>"", "commit"=>"Save "}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+No template found for ShoppingCartController#create, rendering head :no_content
+Completed 204 No Content in 1118ms (ActiveRecord: 9.7ms)
+
+
