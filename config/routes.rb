@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources 'genres'
   resources 'shopping_cart'
   get "checkout", to: "shopping_cart#checkout"
+  resources 'customers'
   resources 'home'
   root 'home#index'
 end

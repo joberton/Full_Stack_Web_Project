@@ -1,19 +1,21 @@
 <h1>Checkout!!!</h1>
-<%= form_with url: shopping_cart_index_url, local: true do |form| %>
+<%= form_with url: customers_url, local: true do |form| %>
+	<h1>Customer Details: </h1>
+
 	<%= form.label :first_name %></br>
-	<%= form.text_field :first_name %></br>
+	<%= form.text_field "customer[first_name]" %></br>
 
 	<%= form.label :last_name %></br>
-	<%= form.text_field :last_name %></br>
+	<%= form.text_field "customer[first_name]" %></br>
 
 	<%= form.label :address %></br>
-	<%= form.text_field :address %></br>
+	<%= form.text_field "customer[address]" %></br>
 
 	<%= form.label :postal_code %></br>
-	<%= form.text_field :postal_code %></br>
+	<%= form.text_field "customer[postal_code]" %></br>
 
 	<%= form.label :email %></br>
-	<%= form.text_field :email %></br>
+	<%= form.text_field "customer[email]" %></br>
 
 	<div id="invoice_container">
 		<h1>Invoice:</h1>
@@ -22,7 +24,7 @@
 				<li><h3><%= item["name"] %></h3></li>
 				<li><strong>Price: <%= item["price"] %></strong></li>
 				<li><strong>Quantity: <%= item["quantity"]%></strong></li>
-				<li><strong>Total: <%= item["price"].to_d * item["quantity"].to_i %></strong></li>
+				<li><strong>Total: <%= item["price"].to_f * item["quantity"].to_i %></strong></li>
 				<hr>
 			<% end %>
 			<li><strong>SubTotal: <%= @order_summary[:sub_total] %></strong></li>

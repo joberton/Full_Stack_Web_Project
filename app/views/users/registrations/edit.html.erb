@@ -4,6 +4,11 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :province %></br>
+     <%= select_tag "user[province_id]", options_for_select(@provinces.collect{|province| [province.name,province.id]}) %></br>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
