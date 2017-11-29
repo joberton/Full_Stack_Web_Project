@@ -22672,3 +22672,1818 @@ Processing by Admin::OrdersController#index as HTML
 Completed 200 OK in 612ms (Views: 492.7ms | ActiveRecord: 27.7ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-11-28 22:54:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-11-28 22:54:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (84.6ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 2231ms (Views: 2203.7ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-11-28 22:54:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"svHJYPe8GVFHLSjAl3IHz9zIK7iIQH1TrNNDEvZCbeZRzBueEvekwtCLKFn1syXJ+vBSwGX+7FTTc7YWz7tMdw==", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-28 22:54:14.081632"], ["last_sign_in_at", "2017-11-28 21:55:19.110066"], ["sign_in_count", 9], ["id", 1]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 322ms (ActiveRecord: 19.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-28 22:54:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (0.8ms)
+  [1m[36mGame Load (1.7ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (41.7ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 696ms (Views: 631.0ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/customers" for 10.0.2.2 at 2017-11-28 22:54:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."user_id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application
+  Rendered customers/index.html.erb within layouts/application (26.1ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 17.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `first!' for #<Customer:0xb2967168>
+Did you mean?  first_name):
+    1: <h1>Customer</h1>
+    2: <h1><%= @customer.first!.inspect %></h1>
+    3: <ul>
+    4: 	
+    5: </ul>
+  
+app/views/customers/index.html.erb:2:in `_app_views_customers_index_html_erb__616267275__649382978'
+Started GET "/customers" for 10.0.2.2 at 2017-11-28 22:55:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."user_id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application
+  Rendered customers/index.html.erb within layouts/application (0.5ms)
+  Rendered common/_menu.html.erb (1.2ms)
+Completed 200 OK in 591ms (Views: 534.4ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/admin" for 10.0.2.2 at 2017-11-28 22:55:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 81ms
+
+
+Started GET "/admin/login" for 10.0.2.2 at 2017-11-28 22:55:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (235.5ms)
+Completed 200 OK in 703ms (Views: 680.3ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/admin/login" for 10.0.2.2 at 2017-11-28 22:55:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1IQChlbnVWeOBObebXoTKozgnif+K7GJxr2zj1HKAtla+j4XyHgFPJTTrntyg6shTpSO/kmh215w/Thran6KQw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2017-11-28 22:55:57.494279"], ["last_sign_in_at", "2017-11-28 22:19:41.370405"], ["sign_in_count", 17], ["updated_at", "2017-11-28 22:55:57.497495"], ["id", 1]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 256ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/admin" for 10.0.2.2 at 2017-11-28 22:55:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/page/index.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/page/index.html.arb (436.3ms)
+Completed 200 OK in 576ms (Views: 454.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/admin/customers" for 10.0.2.2 at 2017-11-28 22:56:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  [1m[36mAdminUser Load (1.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (604.4ms)
+Completed 200 OK in 751ms (Views: 621.4ms | ActiveRecord: 29.9ms)
+
+
+Started GET "/customers" for 10.0.2.2 at 2017-11-28 22:56:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."user_id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application
+  Rendered customers/index.html.erb within layouts/application (0.8ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 585ms (Views: 526.0ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/customers" for 10.0.2.2 at 2017-11-28 22:57:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."user_id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application
+  Rendered customers/index.html.erb within layouts/application (0.7ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 574ms (Views: 516.1ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/admin/orders" for 10.0.2.2 at 2017-11-28 22:57:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (2.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (490.0ms)
+Completed 200 OK in 623ms (Views: 506.9ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-29 00:25:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-11-29 00:25:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (85.7ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 2267ms (Views: 2235.8ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-11-29 00:25:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6CHbTXipPH1B5oVY87RHG5+e26daVUkguW8i/Vo7AiRH8Veu595GRRmqM1WiU015SdrR5uKbrF0oyoktfDmKUA==", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-29 00:25:28.270209"], ["last_sign_in_at", "2017-11-28 22:54:14.081632"], ["sign_in_count", 10], ["id", 1]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 333ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-29 00:25:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (0.8ms)
+  [1m[36mGame Load (2.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (52.6ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 681ms (Views: 613.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/games/2" for 10.0.2.2 at 2017-11-29 00:25:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (1.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.3ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 688ms (Views: 602.0ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/games/2/add_shopping_cart" for 10.0.2.2 at 2017-11-29 00:25:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#add_to_cart as HTML
+  Parameters: {"game_id"=>"2"}
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 62ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 00:25:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.3ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 616ms (Views: 552.3ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-29 00:25:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (3.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (4.7ms)
+  Rendered common/_menu.html.erb (1.6ms)
+Completed 200 OK in 771ms (Views: 629.4ms | ActiveRecord: 16.5ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLineItems (20171129002950)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar, "price" decimal, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171129002950"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddOrderToLineItems (20171129003025)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.4ms)[0m  [1m[35mALTER TABLE "line_items" ADD "order_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_line_items_on_order_id" ON "line_items" ("order_id")[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171129003025"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_consoles_on_product_type_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_consoles_on_product_type_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_user_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_line_items_on_order_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_line_items_on_order_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_province_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_province_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/admin" for 10.0.2.2 at 2017-11-29 00:46:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 10.0.2.2 at 2017-11-29 00:46:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (263.5ms)
+Completed 200 OK in 2154ms (Views: 2120.5ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/admin/login" for 10.0.2.2 at 2017-11-29 00:46:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GjHj/4bqoPFpGpl5sSoBfvS1F5q+oRcPaKoKA55hqdD7RNi85NRM3nH0ynVVrbcYX63DT4S22MPKSZgLLln50g==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2017-11-29 00:46:36.825941"], ["last_sign_in_at", "2017-11-28 22:55:57.494279"], ["sign_in_count", 18], ["updated_at", "2017-11-29 00:46:36.827663"], ["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 344ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/admin" for 10.0.2.2 at 2017-11-29 00:46:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (1.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/page/index.html.arb
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/page/index.html.arb (399.4ms)
+Completed 200 OK in 542ms (Views: 417.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:46:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (580.5ms)
+Completed 200 OK in 741ms (Views: 605.7ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/admin/line_items/new" for 10.0.2.2 at 2017-11-29 00:46:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#new as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (615.3ms)
+Completed 200 OK in 776ms (Views: 647.2ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/admin/orders" for 10.0.2.2 at 2017-11-29 00:47:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (575.1ms)
+Completed 200 OK in 727ms (Views: 590.1ms | ActiveRecord: 35.1ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:47:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (482.9ms)
+Completed 200 OK in 637ms (Views: 510.2ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/admin/line_items/new" for 10.0.2.2 at 2017-11-29 00:47:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#new as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (614.6ms)
+Completed 200 OK in 786ms (Views: 645.3ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/admin/consoles" for 10.0.2.2 at 2017-11-29 00:48:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ConsolesController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "consoles" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "consoles" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "consoles"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "consoles" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mConsole Load (2.5ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" ORDER BY "consoles"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProductType Load (0.9ms)[0m  [1m[34mSELECT  "product_types".* FROM "product_types" WHERE "product_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE ProductType Load (0.0ms)[0m  [1m[34mSELECT  "product_types".* FROM "product_types" WHERE "product_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE ProductType Load (0.0ms)[0m  [1m[34mSELECT  "product_types".* FROM "product_types" WHERE "product_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE ProductType Load (0.0ms)[0m  [1m[34mSELECT  "product_types".* FROM "product_types" WHERE "product_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mProductType Load (2.7ms)[0m  [1m[34mSELECT "product_types".* FROM "product_types"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (563.3ms)
+Completed 200 OK in 711ms (Views: 574.5ms | ActiveRecord: 36.0ms)
+
+
+Started POST "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:48:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tsV55KMwGYtJWqoq+0IXPsagMGz3lAkKOJL1MAAsF/se38Ef806fzD1vhIJOnH/DGm0CxkqNRcURaqD5hJ9WmQ==", "line_item"=>{"order_id"=>"1", "product_name"=>"Nintendo Entertainment System", "price"=>"129.99", "quantity"=>"1"}, "commit"=>"Create Line item"}
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :order_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  [1m[36mOrder Load (2.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (571.6ms)
+Completed 200 OK in 832ms (Views: 598.6ms | ActiveRecord: 22.6ms)
+
+
+Started POST "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:48:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pMKxW7k+is3zkqJ4+FKWTox51XmEIVZdZjMjwiEkxEMM2Amg6UAMioenjNBNjP6zULTn0zk4GpJPy3YLpZeFIQ==", "line_item"=>{"order_id"=>"2", "product_name"=>"Nintendo Entertainment System", "price"=>"129.99", "quantity"=>"1"}, "commit"=>"Create Line item"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :order_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (584.6ms)
+Completed 200 OK in 842ms (Views: 612.7ms | ActiveRecord: 23.3ms)
+
+
+Started POST "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:48:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uag0dfU2L/zSGjIygeMpRWNHWeOg46TH+LDjIjSrQYMRsoyOpUipu6YvHJo0PUG4v4prSR366AjRSLbrsBgA4Q==", "line_item"=>{"order_id"=>"2", "product_name"=>"Nintendo Entertainment System", "price"=>"129.99", "quantity"=>"1"}, "commit"=>"Create Line item"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :order_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (562.3ms)
+Completed 200 OK in 820ms (Views: 589.7ms | ActiveRecord: 23.0ms)
+
+
+Started POST "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:48:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uag0dfU2L/zSGjIygeMpRWNHWeOg46TH+LDjIjSrQYMRsoyOpUipu6YvHJo0PUG4v4prSR366AjRSLbrsBgA4Q==", "line_item"=>{"order_id"=>"2", "product_name"=>"Nintendo Entertainment System", "price"=>"129.99", "quantity"=>"1"}, "commit"=>"Create Line item"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :order_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (500.9ms)
+Completed 200 OK in 729ms (Views: 523.8ms | ActiveRecord: 20.9ms)
+
+
+Started POST "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:49:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uag0dfU2L/zSGjIygeMpRWNHWeOg46TH+LDjIjSrQYMRsoyOpUipu6YvHJo0PUG4v4prSR366AjRSLbrsBgA4Q==", "line_item"=>{"order_id"=>"2", "product_name"=>"Nintendo Entertainment System", "price"=>"129.99", "quantity"=>"1"}, "commit"=>"Create Line item"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "line_items" ("product_name", "price", "quantity", "created_at", "updated_at", "order_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_name", "Nintendo Entertainment System"], ["price", 129.99], ["quantity", 1], ["created_at", "2017-11-29 00:49:15.388478"], ["updated_at", "2017-11-29 00:49:15.388478"], ["order_id", 2]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/line_items/1
+Completed 302 Found in 216ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/admin/line_items/1" for 10.0.2.2 at 2017-11-29 00:49:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "LineItem"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "LineItem"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (520.8ms)
+Completed 200 OK in 662ms (Views: 540.4ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:49:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (529.2ms)
+Completed 200 OK in 679ms (Views: 550.4ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/admin/orders/2" for 10.0.2.2 at 2017-11-29 00:49:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (1.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 2 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Order"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 2 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Order"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (562.4ms)
+Completed 200 OK in 723ms (Views: 590.8ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:50:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (2.1ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (535.9ms)
+Completed 200 OK in 679ms (Views: 554.6ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/admin/line_items/new" for 10.0.2.2 at 2017-11-29 00:50:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#new as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/new.html.arb (487.9ms)
+Completed 200 OK in 622ms (Views: 514.2ms | ActiveRecord: 18.7ms)
+
+
+Started POST "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:50:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s7skAnvlMadW9jxOZQ7iOdrpf0Ew6gDtpLc+xa+Px2kboZz5K5u34CLDEubQ0IrEBiRN643zTCKNT2sMKzyGCw==", "line_item"=>{"order_id"=>"1", "product_name"=>"Nintendo Entertainment System", "price"=>"255.98", "quantity"=>"2"}, "commit"=>"Create Line item"}
+  [1m[36mAdminUser Load (2.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (5.1ms)[0m  [1m[32mINSERT INTO "line_items" ("product_name", "price", "quantity", "created_at", "updated_at", "order_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_name", "Nintendo Entertainment System"], ["price", 255.98], ["quantity", 2], ["created_at", "2017-11-29 00:50:31.653264"], ["updated_at", "2017-11-29 00:50:31.653264"], ["order_id", 1]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/line_items/2
+Completed 302 Found in 234ms (ActiveRecord: 31.0ms)
+
+
+Started GET "/admin/line_items/2" for 10.0.2.2 at 2017-11-29 00:50:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (1.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 2 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "LineItem"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 2 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "LineItem"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (539.1ms)
+Completed 200 OK in 693ms (Views: 565.0ms | ActiveRecord: 28.4ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:50:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (2.0ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (3.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (507.6ms)
+Completed 200 OK in 649ms (Views: 524.7ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/admin/orders/1" for 10.0.2.2 at 2017-11-29 00:50:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Order"], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 1 AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Order"], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/show.html.arb (495.7ms)
+Completed 200 OK in 645ms (Views: 522.5ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:55:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (1.9ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.9ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (473.7ms)
+Completed 200 OK in 603ms (Views: 489.7ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-29 00:57:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (0.9ms)
+  [1m[36mGame Load (1.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (41.7ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 912ms (Views: 847.5ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/games/7" for 10.0.2.2 at 2017-11-29 00:57:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.4ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 674ms (Views: 595.4ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/games/7/add_shopping_cart" for 10.0.2.2 at 2017-11-29 00:57:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#add_to_cart as HTML
+  Parameters: {"game_id"=>"7"}
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 59ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 00:58:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.7ms)
+  Rendered common/_menu.html.erb (1.2ms)
+Completed 200 OK in 616ms (Views: 560.9ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-29 00:58:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.4ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (9.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 704ms (Views: 613.3ms | ActiveRecord: 17.2ms)
+
+
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 00:58:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting =>
+...line_item.name,:price line_item.price,quantity: line_item.qu...
+...                               ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+...price line_item.price,quantity: line_item.quantity,:order_id...
+...                               ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:13: syntax error, unexpected tIVAR, expecting &. or :: or '[' or '.'
+..._item.quantity,:order_id @order.id)
+...                               ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:13: syntax error, unexpected ')', expecting keyword_end
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:16: syntax error, unexpected keyword_else, expecting keyword_end
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:45: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/customers_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting =>
+app/controllers/customers_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/customers_controller.rb:13: syntax error, unexpected tIVAR, expecting &. or :: or '[' or '.'
+app/controllers/customers_controller.rb:13: syntax error, unexpected ')', expecting keyword_end
+app/controllers/customers_controller.rb:16: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/customers_controller.rb:45: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 00:59:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qm0eysf38h0tyDWk07Kg7uJj3MSQmQPLNf9qkqJPubyeVy4iUhf0xgL3PJSpqvmPtou98IwHMsaYApeVbQXsjQ==", "customer"=>{"first_name"=>"ytryrty", "address"=>"rtyrtytr", "postal_code"=>"ytry", "email"=>"trytryrty"}, "commit"=>"Save "}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "orders" ("status", "user_id", "created_at", "updated_at", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["status", "new"], ["user_id", 1], ["created_at", "2017-11-29 00:59:11.493366"], ["updated_at", "2017-11-29 00:59:11.493366"], ["amount", 239.7378]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 75ms (ActiveRecord: 31.1ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 00:59:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.4ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 650ms (Views: 589.7ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/admin/orders" for 10.0.2.2 at 2017-11-29 00:59:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (531.7ms)
+Completed 200 OK in 669ms (Views: 543.8ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 00:59:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (2.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (462.4ms)
+Completed 200 OK in 597ms (Views: 477.1ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:02:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.0ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 565ms (Views: 512.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-29 01:02:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.0ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (3.7ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 602ms (Views: 522.0ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 01:02:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting =>
+...e_item["name"],:price line_item["price"],quantity: line_item...
+...                               ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+...ce line_item["price"],quantity: line_item["quantity"],:order...
+...                               ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:13: syntax error, unexpected tIVAR, expecting &. or :: or '[' or '.'
+...em["quantity"],:order_id @order.id)
+...                               ^
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:13: syntax error, unexpected ')', expecting keyword_end
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:16: syntax error, unexpected keyword_else, expecting keyword_end
+/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/controllers/customers_controller.rb:45: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/customers_controller.rb:13: syntax error, unexpected tIDENTIFIER, expecting =>
+app/controllers/customers_controller.rb:13: syntax error, unexpected tLABEL, expecting '='
+app/controllers/customers_controller.rb:13: syntax error, unexpected tIVAR, expecting &. or :: or '[' or '.'
+app/controllers/customers_controller.rb:13: syntax error, unexpected ')', expecting keyword_end
+app/controllers/customers_controller.rb:16: syntax error, unexpected keyword_else, expecting keyword_end
+app/controllers/customers_controller.rb:45: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/admin/consoles" for 10.0.2.2 at 2017-11-29 01:05:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ConsolesController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "consoles" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "consoles" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "consoles"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "consoles" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mConsole Load (1.9ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" ORDER BY "consoles"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProductType Load (1.3ms)[0m  [1m[34mSELECT  "product_types".* FROM "product_types" WHERE "product_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE ProductType Load (0.0ms)[0m  [1m[34mSELECT  "product_types".* FROM "product_types" WHERE "product_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE ProductType Load (0.0ms)[0m  [1m[34mSELECT  "product_types".* FROM "product_types" WHERE "product_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE ProductType Load (0.0ms)[0m  [1m[34mSELECT  "product_types".* FROM "product_types" WHERE "product_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mProductType Load (1.8ms)[0m  [1m[34mSELECT "product_types".* FROM "product_types"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (1972.9ms)
+Completed 200 OK in 2092ms (Views: 2006.5ms | ActiveRecord: 34.5ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 01:05:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (3.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (507.5ms)
+Completed 200 OK in 653ms (Views: 525.1ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/admin/orders" for 10.0.2.2 at 2017-11-29 01:06:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdminUser Load (1.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.7ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (550.2ms)
+Completed 200 OK in 701ms (Views: 563.0ms | ActiveRecord: 37.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-29 01:06:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (1.0ms)
+  [1m[36mGame Load (1.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (43.0ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 850ms (Views: 781.0ms | ActiveRecord: 16.8ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 10.0.2.2 at 2017-11-29 01:10:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (1.0ms)
+  [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (58.6ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 2436ms (Views: 2370.5ms | ActiveRecord: 16.6ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2017-11-29 01:11:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FlmIoEXRW5K/BeabXw5M/ALi4p14i1srsPAdffGqJKe+QzBbFa/d1cswyDPq0CQB3i/QN8WSF+SZCEi0dRllxQ=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-29 01:11:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 24ms
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-11-29 01:11:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (72.7ms)
+  Rendered common/_menu.html.erb (0.7ms)
+Completed 200 OK in 674ms (Views: 640.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin/customers" for 10.0.2.2 at 2017-11-29 01:11:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+Completed 401 Unauthorized in 86ms
+
+
+Started GET "/admin/login" for 10.0.2.2 at 2017-11-29 01:11:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (193.6ms)
+Completed 200 OK in 635ms (Views: 601.0ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/admin/login" for 10.0.2.2 at 2017-11-29 01:11:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7j9HJZWMU7D9E+PQrafD7baM36Qm241j6q0dLwE7BBDHGrFFIQ3+/a2oAEu9zJ8pZogFxvNWl4B03+Gkx8LkAg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2017-11-29 01:11:27.736850"], ["last_sign_in_at", "2017-11-29 00:46:36.825941"], ["sign_in_count", 19], ["updated_at", "2017-11-29 01:11:27.737691"], ["id", 1]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/customers
+Completed 302 Found in 347ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/admin/customers" for 10.0.2.2 at 2017-11-29 01:11:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (571.8ms)
+Completed 200 OK in 727ms (Views: 589.8ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 01:11:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (2.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (497.3ms)
+Completed 200 OK in 648ms (Views: 515.3ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/admin/customers" for 10.0.2.2 at 2017-11-29 01:11:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (540.4ms)
+Completed 200 OK in 693ms (Views: 559.3ms | ActiveRecord: 32.3ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-11-29 01:11:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9k1iM2n5f5hWKEGtCma+d4IUWtbjE1G+PT1f7F0dX0zfaJRT3XjS1QaTojYaDeKzUhCAtDaeS12jT6Nnm+S/Xg==", "user"=>{"email"=>"someuser@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+devise (4.3.0) lib/devise/controllers/helpers.rb:253:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-11-29 01:11:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9k1iM2n5f5hWKEGtCma+d4IUWtbjE1G+PT1f7F0dX0zfaJRT3XjS1QaTojYaDeKzUhCAtDaeS12jT6Nnm+S/Xg==", "user"=>{"email"=>"someuser@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+devise (4.3.0) lib/devise/controllers/helpers.rb:253:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-11-29 01:11:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9k1iM2n5f5hWKEGtCma+d4IUWtbjE1G+PT1f7F0dX0zfaJRT3XjS1QaTojYaDeKzUhCAtDaeS12jT6Nnm+S/Xg==", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+devise (4.3.0) lib/devise/controllers/helpers.rb:253:in `handle_unverified_request'
+actionpack (5.1.4) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2017-11-29 01:12:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-11-29 01:12:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (91.9ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 2242ms (Views: 2211.0ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-11-29 01:12:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7dppQYvPq3jKKZ4b7uybboBAW31ekt7sErWGQKgluQQed2FWt6O5Ju8ZAHHSREBV95hN6LeYjve3KOm6rP5bcA==", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-11-29 01:12:23.093365"], ["last_sign_in_at", "2017-11-29 00:25:28.270209"], ["sign_in_count", 11], ["id", 1]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 332ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-29 01:12:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (0.7ms)
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (43.3ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 677ms (Views: 611.0ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/consoles" for 10.0.2.2 at 2017-11-29 01:12:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/index.html.erb within layouts/application
+  Rendered common/_search.html.erb (0.8ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "consoles"[0m
+  [1m[36mConsole Load (1.8ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered consoles/index.html.erb within layouts/application (69.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 743ms (Views: 671.1ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/consoles/2" for 10.0.2.2 at 2017-11-29 01:12:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mConsole Load (1.3ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" WHERE "consoles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/show.html.erb within layouts/application
+  Rendered consoles/show.html.erb within layouts/application (1.3ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 671ms (Views: 583.5ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/consoles/2/add_shopping_cart" for 10.0.2.2 at 2017-11-29 01:12:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#add_to_cart as HTML
+  Parameters: {"console_id"=>"2"}
+  [1m[36mConsole Load (1.2ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" WHERE "consoles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 58ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:12:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.7ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 654ms (Views: 592.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-29 01:12:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.5ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (4.4ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 743ms (Views: 615.0ms | ActiveRecord: 17.2ms)
+
+
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 01:12:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H0GJeGsk3YJG970341Ng4OQ+1HYUZxzciXBYsUfjnHD0xxaVktou5/lQKdRlOZQ3ZNmns4E94RhxDjI7oVzmw==", "customer"=>{"first_name"=>"sdfsdf", "address"=>"sdfsdfsd", "postal_code"=>"fsd", "email"=>"fsdfsd"}, "commit"=>"Save "}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "orders" ("status", "user_id", "created_at", "updated_at", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["status", "new"], ["user_id", 1], ["created_at", "2017-11-29 01:12:47.979113"], ["updated_at", "2017-11-29 01:12:47.979113"], ["amount", 94.3389]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 33.6ms)
+
+
+  
+LoadError (Unable to autoload constant Line_Item, expected /vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/models/line_item.rb to define it):
+  
+app/controllers/customers_controller.rb:13:in `block in create'
+app/controllers/customers_controller.rb:12:in `each'
+app/controllers/customers_controller.rb:12:in `create'
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 01:13:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H0GJeGsk3YJG970341Ng4OQ+1HYUZxzciXBYsUfjnHD0xxaVktou5/lQKdRlOZQ3ZNmns4E94RhxDjI7oVzmw==", "customer"=>{"first_name"=>"sdfsdf", "address"=>"sdfsdfsd", "postal_code"=>"fsd", "email"=>"fsdfsd"}, "commit"=>"Save "}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "orders" ("status", "user_id", "created_at", "updated_at", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["status", "new"], ["user_id", 1], ["created_at", "2017-11-29 01:13:36.489058"], ["updated_at", "2017-11-29 01:13:36.489058"], ["amount", 94.3389]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 33.4ms)
+
+
+  
+LoadError (Unable to autoload constant Line_item, expected /vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/models/line_item.rb to define it):
+  
+app/controllers/customers_controller.rb:13:in `block in create'
+app/controllers/customers_controller.rb:12:in `each'
+app/controllers/customers_controller.rb:12:in `create'
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 01:13:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H0GJeGsk3YJG970341Ng4OQ+1HYUZxzciXBYsUfjnHD0xxaVktou5/lQKdRlOZQ3ZNmns4E94RhxDjI7oVzmw==", "customer"=>{"first_name"=>"sdfsdf", "address"=>"sdfsdfsd", "postal_code"=>"fsd", "email"=>"fsdfsd"}, "commit"=>"Save "}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "orders" ("status", "user_id", "created_at", "updated_at", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["status", "new"], ["user_id", 1], ["created_at", "2017-11-29 01:13:48.850248"], ["updated_at", "2017-11-29 01:13:48.850248"], ["amount", 94.3389]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 31.2ms)
+
+
+  
+NoMethodError (undefined method `create' for #<Hash:0xb0e874d8>):
+  
+app/controllers/customers_controller.rb:13:in `block in create'
+app/controllers/customers_controller.rb:12:in `each'
+app/controllers/customers_controller.rb:12:in `create'
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 01:13:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H0GJeGsk3YJG970341Ng4OQ+1HYUZxzciXBYsUfjnHD0xxaVktou5/lQKdRlOZQ3ZNmns4E94RhxDjI7oVzmw==", "customer"=>{"first_name"=>"sdfsdf", "address"=>"sdfsdfsd", "postal_code"=>"fsd", "email"=>"fsdfsd"}, "commit"=>"Save "}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "orders" ("status", "user_id", "created_at", "updated_at", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["status", "new"], ["user_id", 1], ["created_at", "2017-11-29 01:13:58.778651"], ["updated_at", "2017-11-29 01:13:58.778651"], ["amount", 94.3389]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 35.7ms)
+
+
+  
+LoadError (Unable to autoload constant Line_item, expected /vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/models/line_item.rb to define it):
+  
+app/controllers/customers_controller.rb:13:in `block in create'
+app/controllers/customers_controller.rb:12:in `each'
+app/controllers/customers_controller.rb:12:in `create'
+Started GET "/admin/orders" for 10.0.2.2 at 2017-11-29 01:14:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (644.8ms)
+Completed 200 OK in 810ms (Views: 661.1ms | ActiveRecord: 35.5ms)
+
+
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 01:15:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H0GJeGsk3YJG970341Ng4OQ+1HYUZxzciXBYsUfjnHD0xxaVktou5/lQKdRlOZQ3ZNmns4E94RhxDjI7oVzmw==", "customer"=>{"first_name"=>"sdfsdf", "address"=>"sdfsdfsd", "postal_code"=>"fsd", "email"=>"fsdfsd"}, "commit"=>"Save "}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "orders" ("status", "user_id", "created_at", "updated_at", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["status", "new"], ["user_id", 1], ["created_at", "2017-11-29 01:15:27.810666"], ["updated_at", "2017-11-29 01:15:27.810666"], ["amount", 94.3389]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 26.3ms)
+
+
+  
+LoadError (Unable to autoload constant Line_item, expected /vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/models/line_item.rb to define it):
+  
+app/controllers/customers_controller.rb:13:in `block in create'
+app/controllers/customers_controller.rb:12:in `each'
+app/controllers/customers_controller.rb:12:in `create'
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 01:15:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H0GJeGsk3YJG970341Ng4OQ+1HYUZxzciXBYsUfjnHD0xxaVktou5/lQKdRlOZQ3ZNmns4E94RhxDjI7oVzmw==", "customer"=>{"first_name"=>"sdfsdf", "address"=>"sdfsdfsd", "postal_code"=>"fsd", "email"=>"fsdfsd"}, "commit"=>"Save "}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "orders" ("status", "user_id", "created_at", "updated_at", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["status", "new"], ["user_id", 1], ["created_at", "2017-11-29 01:15:49.583758"], ["updated_at", "2017-11-29 01:15:49.583758"], ["amount", 94.3389]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "line_items" ("product_name", "price", "quantity", "created_at", "updated_at", "order_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_name", "Nintendo 64"], ["price", 84.99], ["quantity", 1], ["created_at", "2017-11-29 01:15:49.626395"], ["updated_at", "2017-11-29 01:15:49.626395"], ["order_id", 14]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 115ms (ActiveRecord: 49.1ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:15:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.8ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 3882ms (Views: 3828.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 01:15:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mOrder Load (2.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (759.7ms)
+Completed 200 OK in 920ms (Views: 777.3ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/consoles" for 10.0.2.2 at 2017-11-29 01:16:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/index.html.erb within layouts/application
+  Rendered common/_search.html.erb (0.8ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "consoles"[0m
+  [1m[36mConsole Load (1.8ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered consoles/index.html.erb within layouts/application (72.1ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 737ms (Views: 660.8ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/consoles/4" for 10.0.2.2 at 2017-11-29 01:16:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mConsole Load (1.1ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" WHERE "consoles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/show.html.erb within layouts/application
+  Rendered consoles/show.html.erb within layouts/application (1.3ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 638ms (Views: 569.3ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/consoles/4/add_shopping_cart" for 10.0.2.2 at 2017-11-29 01:16:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#add_to_cart as HTML
+  Parameters: {"console_id"=>"4"}
+  [1m[36mConsole Load (1.0ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" WHERE "consoles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 52ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:16:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.6ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 613ms (Views: 558.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/consoles" for 10.0.2.2 at 2017-11-29 01:16:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/index.html.erb within layouts/application
+  Rendered common/_search.html.erb (1.0ms)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "consoles"[0m
+  [1m[36mConsole Load (1.3ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered consoles/index.html.erb within layouts/application (66.6ms)
+Started GET "/consoles/5" for 10.0.2.2 at 2017-11-29 01:16:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 759ms (Views: 685.3ms | ActiveRecord: 18.5ms)
+
+
+Processing by ConsolesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mConsole Load (1.0ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" WHERE "consoles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/show.html.erb within layouts/application
+  Rendered consoles/show.html.erb within layouts/application (1.6ms)
+  Rendered common/_menu.html.erb (1.2ms)
+Completed 200 OK in 639ms (Views: 567.3ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/consoles/5/add_shopping_cart" for 10.0.2.2 at 2017-11-29 01:16:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#add_to_cart as HTML
+  Parameters: {"console_id"=>"5"}
+  [1m[36mConsole Load (1.0ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" WHERE "consoles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 61ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:16:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.2ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 619ms (Views: 561.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/games" for 10.0.2.2 at 2017-11-29 01:16:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mConsole Load (1.1ms)[0m  [1m[34mSELECT "consoles".* FROM "consoles"[0m
+  [1m[36mGenre Load (2.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered common/_search.html.erb (28.6ms)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "games"[0m
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered games/index.html.erb within layouts/application (91.1ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 713ms (Views: 635.3ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/games/6" for 10.0.2.2 at 2017-11-29 01:16:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 644ms (Views: 563.1ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/games/6/add_shopping_cart" for 10.0.2.2 at 2017-11-29 01:16:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#add_to_cart as HTML
+  Parameters: {"game_id"=>"6"}
+  [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 62ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:16:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.3ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 610ms (Views: 551.9ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:16:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.8ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 620ms (Views: 564.5ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/checkout" for 10.0.2.2 at 2017-11-29 01:16:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#checkout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (1.1ms)[0m  [1m[34mSELECT  "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering shopping_cart/checkout.html.erb within layouts/application
+  Rendered shopping_cart/checkout.html.erb within layouts/application (9.4ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 656ms (Views: 573.4ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/customers" for 10.0.2.2 at 2017-11-29 01:16:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"euqUAnyp3yWzIrhS499dZio2i93sObz/xTm4vEKZ7VFtRI59y04k6CXcJgFtxva1dDUWEvps1wjW2EEWaQMQuw==", "customer"=>{"first_name"=>"fdggfd", "address"=>"gfdgfdd", "postal_code"=>"dgfgfd", "email"=>"gfddgf"}, "commit"=>"Save "}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "orders" ("status", "user_id", "created_at", "updated_at", "amount") VALUES (?, ?, ?, ?, ?)[0m  [["status", "new"], ["user_id", 1], ["created_at", "2017-11-29 01:16:45.088799"], ["updated_at", "2017-11-29 01:16:45.088799"], ["amount", 344.0556]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "line_items" ("product_name", "price", "quantity", "created_at", "updated_at", "order_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_name", "Nintendo 64"], ["price", 84.99], ["quantity", 1], ["created_at", "2017-11-29 01:16:45.129988"], ["updated_at", "2017-11-29 01:16:45.129988"], ["order_id", 15]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (5.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "line_items" ("product_name", "price", "quantity", "created_at", "updated_at", "order_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_name", "Super Nintendo Entertainment System"], ["price", 159.99], ["quantity", 1], ["created_at", "2017-11-29 01:16:45.149462"], ["updated_at", "2017-11-29 01:16:45.149462"], ["order_id", 15]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (5.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "line_items" ("product_name", "price", "quantity", "created_at", "updated_at", "order_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_name", "Sega Genesis"], ["price", 44.99], ["quantity", 1], ["created_at", "2017-11-29 01:16:45.168321"], ["updated_at", "2017-11-29 01:16:45.168321"], ["order_id", 15]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (5.9ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (11.4ms)[0m  [1m[32mINSERT INTO "line_items" ("product_name", "price", "quantity", "created_at", "updated_at", "order_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["product_name", "Sonic the Hedgehog 2"], ["price", 19.99], ["quantity", 1], ["created_at", "2017-11-29 01:16:45.188188"], ["updated_at", "2017-11-29 01:16:45.188188"], ["order_id", 15]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/shopping_cart
+Completed 302 Found in 174ms (ActiveRecord: 98.7ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:16:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.7ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 604ms (Views: 549.2ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 01:16:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.9ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.7ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (504.6ms)
+Completed 200 OK in 645ms (Views: 519.0ms | ActiveRecord: 29.3ms)
+
+

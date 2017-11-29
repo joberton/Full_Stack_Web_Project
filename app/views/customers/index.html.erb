@@ -1,5 +1,7 @@
-<h1>Customer</h1>
-<h1><%= @customer.first!.inspect %></h1>
+<h1>Customer:</h1>
 <ul>
-	
+	<li><%= @customer.first_name %></li>
+	<li><%= @customer.last_name %></li>
+	<li><%= @customer.postal_code %></li>
+	<li><%= @customer.email %></li>
 </ul>
