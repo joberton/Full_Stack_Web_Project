@@ -24487,3 +24487,723 @@ Processing by Admin::LineItemsController#index as HTML
 Completed 200 OK in 645ms (Views: 519.0ms | ActiveRecord: 29.3ms)
 
 
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:27:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (19.6ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 3797ms (Views: 3743.5ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:27:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (0.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 657ms (Views: 604.8ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/admin/orders" for 10.0.2.2 at 2017-11-29 01:27:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#index as HTML
+  [1m[36mAdminUser Load (3.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "orders" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (2.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (938.5ms)
+Completed 200 OK in 1144ms (Views: 960.4ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:29:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/index.html.erb within layouts/application (59.6ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 16.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `date_created' for #<Order:0xc3ac990>):
+    4: 		<li>Order: <%= order.id %></li>
+    5: 		<li>Amount: <%= order.amount %></li>
+    6: 		<li>User: <%= order.user %></li>
+    7: 		<li>Date: <%= order.date_created %></li>
+    8: 	<% end %>
+    9: </ul>
+  
+app/views/orders/index.html.erb:7:in `block in _app_views_orders_index_html_erb___929220584_105640500'
+app/views/orders/index.html.erb:3:in `_app_views_orders_index_html_erb___929220584_105640500'
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:30:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/index.html.erb within layouts/application (33.6ms)
+  Rendered common/_menu.html.erb (1.5ms)
+Completed 200 OK in 624ms (Views: 572.0ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:30:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (10.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 662ms (Views: 606.3ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:31:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (10.1ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 597ms (Views: 545.3ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:31:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (10.0ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 597ms (Views: 546.2ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:31:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (11.0ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 659ms (Views: 605.6ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:32:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 13.4ms)
+
+
+  
+NoMethodError (undefined method `line_items' for nil:NilClass):
+  
+app/controllers/orders_controller.rb:5:in `index'
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:32:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 12.9ms)
+
+
+  
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+NoMethodError (undefined method `line_items' for #<Order::ActiveRecord_Relation:0xd366908>):
+  
+app/controllers/orders_controller.rb:5:in `index'
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:33:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? ORDER BY "orders"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (3.8ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 668ms (Views: 521.8ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:33:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."user_id" = ? ORDER BY "orders"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ? LIMIT ?[0m  [["order_id", 1], ["LIMIT", 11]]
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (25.7ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 590ms (Views: 520.7ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:37:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (27.1ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 2001ms (Views: 1939.4ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:37:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 19ms
+
+
+  
+NameError (uninitialized constant OrdersController::LineItems):
+  
+app/controllers/orders_controller.rb:8:in `show'
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:38:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (18.5ms)
+Completed 200 OK in 607ms (Views: 570.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:39:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (12.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (16.5ms)
+Completed 200 OK in 600ms (Views: 562.5ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:40:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (16.7ms)
+Completed 200 OK in 595ms (Views: 557.5ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:40:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (11.6ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (16.4ms)
+Completed 200 OK in 586ms (Views: 546.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/admin/line_items" for 10.0.2.2 at 2017-11-29 01:40:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::LineItemsController#index as HTML
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 FROM "line_items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mLineItem Load (2.1ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" ORDER BY "line_items"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.9ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered /home/vagrant/.rvm/gems/ruby-2.3.3/bundler/gems/activeadmin-5f640f259a4f/app/views/active_admin/resource/index.html.arb (738.7ms)
+Completed 200 OK in 924ms (Views: 755.4ms | ActiveRecord: 33.6ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:42:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (17.5ms)
+Completed 200 OK in 612ms (Views: 573.9ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:43:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (18.4ms)
+Completed 200 OK in 668ms (Views: 626.7ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:43:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (11.5ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (17.8ms)
+Completed 200 OK in 656ms (Views: 613.0ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:44:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 3.6ms)
+
+
+  
+SyntaxError (/vagrant/Ruby_on_Rails/Web_Project/Full_Stack_Web_Project/app/views/orders/show.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+@output_buffer.append=( link_to "back?" order_index_url );
+                                                       ^):
+  
+app/views/orders/show.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:44:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (376.5ms)
+Completed 500 Internal Server Error in 462ms (ActiveRecord: 8.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_index_url' for #<#<Class:0xcf1f368>:0xcf1e404>
+Did you mean?  order_url):
+     8: 		<hr>
+     9: 	</ul>
+    10: <% end %>
+    11: <%= link_to "back?", order_index_url %>
+  
+app/views/orders/show.html.erb:11:in `_app_views_orders_show_html_erb___112842834_108592120'
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:45:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (2.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (11.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (19.4ms)
+Completed 200 OK in 695ms (Views: 650.8ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:45:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.4ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (18.2ms)
+Completed 200 OK in 682ms (Views: 638.2ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/orders/2" for 10.0.2.2 at 2017-11-29 01:45:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 2]]
+  Rendered orders/show.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (19.3ms)
+Completed 200 OK in 603ms (Views: 563.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:45:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (11.0ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 584ms (Views: 536.7ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/orders/8" for 10.0.2.2 at 2017-11-29 01:45:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (2.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 8]]
+  Rendered orders/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (16.5ms)
+Completed 200 OK in 593ms (Views: 555.4ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/orders/15" for 10.0.2.2 at 2017-11-29 01:45:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"15"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 15]]
+  Rendered orders/show.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (16.1ms)
+Completed 200 OK in 590ms (Views: 552.5ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/orders/15" for 10.0.2.2 at 2017-11-29 01:45:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"15"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 15]]
+  Rendered orders/show.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (16.9ms)
+Completed 200 OK in 591ms (Views: 554.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/orders/15" for 10.0.2.2 at 2017-11-29 01:46:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"15"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 15]]
+  Rendered orders/show.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (30.0ms)
+Completed 200 OK in 624ms (Views: 585.7ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/orders/15" for 10.0.2.2 at 2017-11-29 01:46:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"15"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 15]]
+  Rendered orders/show.html.erb within layouts/application (29.0ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (18.9ms)
+Completed 200 OK in 2134ms (Views: 2087.1ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:46:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (12.4ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 664ms (Views: 610.1ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:47:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (11.9ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 673ms (Views: 616.1ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:47:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (11.2ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 697ms (Views: 642.5ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/orders/1" for 10.0.2.2 at 2017-11-29 01:47:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered orders/show.html.erb within layouts/application (13.6ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (19.7ms)
+Completed 200 OK in 626ms (Views: 585.5ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:48:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (11.3ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 656ms (Views: 594.6ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/orders/1" for 10.0.2.2 at 2017-11-29 01:48:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mLineItem Load (1.2ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered orders/show.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered common/_menu.html.erb (16.6ms)
+Completed 200 OK in 592ms (Views: 555.0ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:48:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (11.0ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 580ms (Views: 529.8ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:49:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (10.5ms)
+  Rendered common/_menu.html.erb (0.7ms)
+Completed 200 OK in 574ms (Views: 527.3ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:51:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (12.0ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 617ms (Views: 566.9ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/users/edit" for 10.0.2.2 at 2017-11-29 01:52:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  [1m[36mProvince Load (1.2ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered users/registrations/edit.html.erb within layouts/application (61.5ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 697ms (Views: 662.1ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:52:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (4.7ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 709ms (Views: 644.8ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:52:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (3.8ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 619ms (Views: 550.1ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:52:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (10.4ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 602ms (Views: 553.1ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/genres" for 10.0.2.2 at 2017-11-29 01:52:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GenresController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (12.0ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 620ms (Views: 556.3ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/consoles" for 10.0.2.2 at 2017-11-29 01:53:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/index.html.erb within layouts/application
+  Rendered common/_search.html.erb (0.9ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "consoles"[0m
+  [1m[36mConsole Load (1.2ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered consoles/index.html.erb within layouts/application (63.7ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 671ms (Views: 610.2ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/games" for 10.0.2.2 at 2017-11-29 01:53:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mConsole Load (1.2ms)[0m  [1m[34mSELECT "consoles".* FROM "consoles"[0m
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered common/_search.html.erb (28.6ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "games"[0m
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered games/index.html.erb within layouts/application (88.9ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 694ms (Views: 618.8ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-29 01:53:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (0.7ms)
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (52.5ms)
+  Rendered common/_menu.html.erb (0.9ms)
+Completed 200 OK in 641ms (Views: 582.1ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:53:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (10.8ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 625ms (Views: 575.3ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/orders" for 10.0.2.2 at 2017-11-29 01:53:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered orders/index.html.erb within layouts/application (10.9ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 693ms (Views: 634.9ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/customers" for 10.0.2.2 at 2017-11-29 01:53:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."user_id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering customers/index.html.erb within layouts/application
+  Rendered customers/index.html.erb within layouts/application (0.8ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 611ms (Views: 544.3ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/shopping_cart" for 10.0.2.2 at 2017-11-29 01:53:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ShoppingCartController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering shopping_cart/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shopping_cart/index.html.erb within layouts/application (5.5ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 612ms (Views: 550.2ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/genres" for 10.0.2.2 at 2017-11-29 01:54:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GenresController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (11.1ms)
+  Rendered common/_menu.html.erb (1.0ms)
+Completed 200 OK in 633ms (Views: 566.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/consoles" for 10.0.2.2 at 2017-11-29 01:54:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ConsolesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering consoles/index.html.erb within layouts/application
+  Rendered common/_search.html.erb (0.8ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "consoles"[0m
+  [1m[36mConsole Load (1.4ms)[0m  [1m[34mSELECT  "consoles".* FROM "consoles" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  Rendered consoles/index.html.erb within layouts/application (56.8ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 685ms (Views: 623.4ms | ActiveRecord: 15.7ms)
+
+

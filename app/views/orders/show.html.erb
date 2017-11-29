@@ -1,0 +1,11 @@
+<h1>Order Details!!!</h1>
+<ul>
+	<% @line_items.each do |line_item| %>
+		<li>Product: <%= line_item.product_name %></li>
+		<li>Quantity: <%= line_item.quantity %></li>
+		<li>Price: <%= line_item.price %></li>
+		<li>Total: <%= line_item.price.to_f * line_item.quantity.to_i %> </li>
+		<hr>
+	<% end %>
+</ul>
+<%= link_to "back?", orders_url %>
