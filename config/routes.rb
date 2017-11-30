@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   resources 'customers'
   resources 'home'
   resources 'orders'
+  resources :charges
   root 'home#index'
 end

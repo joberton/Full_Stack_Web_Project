@@ -6,7 +6,7 @@
 	<%= form.text_field "customer[first_name]" %></br>
 
 	<%= form.label :last_name %></br>
-	<%= form.text_field "customer[first_name]" %></br>
+	<%= form.text_field "customer[last_name]" %></br>
 
 	<%= form.label :address %></br>
 	<%= form.text_field "customer[address]" %></br>
@@ -35,5 +35,15 @@
 		</ul>
 	</div>
 
-	<%= form.submit %>
+	<article>
+		<% if flash[:error].present? %>
+			<div id="error_explanation">
+				<p><%= flash[:error] %></p>
+			</div>
+		<% end %>
+	</article>
+	
+	<script src="https://checkout.stripe.com/checkout.js"
+		class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" 
+        data-description="product charge" data-amount= "<%= (@order_summary[:grand_total]*100) %>" data-locale="auto"></script>
 <% end %>
