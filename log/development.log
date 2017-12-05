@@ -32263,3 +32263,21 @@ Processing by ConsolesController#index as HTML
 Completed 200 OK in 685ms (Views: 621.2ms | ActiveRecord: 15.7ms)
 
 
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2017-11-30 03:27:28 +0000
+Started GET "/" for 10.0.2.2 at 2017-12-05 17:11:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-12-05 17:11:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (71.9ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 1969ms (Views: 1942.2ms | ActiveRecord: 5.9ms)
+
+
