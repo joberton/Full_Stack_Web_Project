@@ -32411,3 +32411,44 @@ Processing by Admin::LineItemsController#index as HTML
 Completed 200 OK in 745ms (Views: 599.9ms | ActiveRecord: 43.7ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-12-05 23:34:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2017-12-05 23:34:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (75.3ms)
+  Rendered common/_menu.html.erb (0.8ms)
+Completed 200 OK in 2312ms (Views: 2284.0ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2017-12-05 23:34:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ZY/tTjvpxAl6DjcWIKsz3JW1uimSEUDdaGJXhS3rIteeEO3KGzu7v2hhWUVP6vAaPJuWoEPFW87Cl9KzEDXtA==", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-12-05 23:34:23.461921"], ["last_sign_in_at", "2017-11-30 00:37:34.192595"], ["sign_in_count", 15], ["id", 1]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 317ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-12-05 23:34:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered common/_filter_product.html.erb (0.8ms)
+  [1m[36mGame Load (2.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered home/index.html.erb within layouts/application (37.5ms)
+  Rendered common/_menu.html.erb (1.1ms)
+Completed 200 OK in 624ms (Views: 564.9ms | ActiveRecord: 14.2ms)
+
+
