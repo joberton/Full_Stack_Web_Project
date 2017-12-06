@@ -1,0 +1,30 @@
+<h1>Editz???</h1>
+<%= form_with model: @company_details, local: true do |form| %>
+	<% if @company_details.errors.any? %>
+		<div id="error">
+			<h2><%= pluralize(@company_details.errors.count, 'error')%> prohibited this game from being saved</h2>
+			<ul>
+				<%= @company_details.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<%= form.label :description %></br>
+	<%= form.text_field :description %></br>
+
+	<%= form.label :address %></br>
+	<%= form.text_field :address %></br>
+
+	<%= form.label :city %></br>
+	<%= form.text_field :city %></br>
+
+	<%= form.label :phone_number %></br>
+	<%= form.text_field :phone_number %></br>
+
+	<%= form.label :contact_email %></br>
+	<%= form.text_field :contact_email %></br>
+
+	<%= form.submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>About/Contact Us</h1>
+<ul>
+	<li><%= @company_details.description %></li></br>
+	<li><%= @company_details.address %></li></br>
+	<li><%= @company_details.city %></li></br>
+	<li><%= @company_details.phone_number %></li></br>
+	<li><%= @company_details.contact_email %></li></br>
+</ul>
+<%= link_to "edit details?", edit_about_u_url(@company_details) %>
